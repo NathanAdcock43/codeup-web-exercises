@@ -35,8 +35,30 @@
 // }
 // console.log(numberExperiment(1, 2));
 //
-var anonomousTest = function(){
-    return "beep, beep";
-}
+//
+//**********setting a default parameter
+// function sayhello(name = "Marco"){
+//     return alert("hello there, " + name)
+// }
+//
+// console.log(sayhello("Nathan"))
 
-console.log(anonomousTest());
+//******scope lesson
+
+
+
+
+
+
+//**********IIFE: The first way to put your code behind a gate
+
+(function(){
+    // where our JS code exists - use local scope to deny accessibility
+    "use strict"
+    function someFunctionNoParameters(){
+        // where our JS code exists - use local scope to deny accessibility
+        return alert("Hello there , Marco")
+}
+    var iffeVar = "I'm behind the IFFE- everything is okay";
+    console.log(iffeVar);
+})();
