@@ -184,6 +184,10 @@ function choose (){
     var playGame = confirm("Hello, Would you like to pick a number?");
     if (playGame === true){
         var pickNum = Number(prompt("Please, Choose a number between 1 and 100"));
+        console.log(pickNum);
+        if(!Number(pickNum)) {
+            return alert("This is not a number?");
+        }
         var evenodd = ((pickNum%2) === 0 ) ? "Your number is even" : "Your number is odd";
         var plus = (pickNum+100);
         var posNeg = (pickNum>=0) ? "Your number is positive" : "Your number is odd" ;
@@ -197,5 +201,7 @@ function choose (){
 }
 
 choose()
+
+
 
 
