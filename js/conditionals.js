@@ -180,28 +180,33 @@
 
 
 
-function choose (){
-    var playGame = confirm("Hello, Would you like to pick a number?");
-    if (playGame === true){
-        var pickNum = Number(prompt("Please, Choose a number between 1 and 100"));
-        console.log(pickNum);
-        if(!Number(pickNum)) {
-            return alert("This is not a number?");
-        }
-        var evenodd = ((pickNum%2) === 0 ) ? "Your number is even" : "Your number is odd";
-        var plus = (pickNum+100);
-        var posNeg = (pickNum>=0) ? "Your number is positive" : "Your number is odd" ;
-        alert(evenodd);
-        alert(plus + " Is your number plus 100");
-        alert(posNeg);
-    }
-    else {
-        return alert("See you later!");
-    }
-}
+// function choose (){
+//     var playGame = confirm("Hello, Would you like to pick a number?");
+//     if (playGame === true){
+//         var pickNum = Number(prompt("Please, Choose a number between 1 and 100"));
+//         console.log(pickNum);
+//         if(!Number(pickNum)) {
+//             return alert("This is not a number?");
+//         }
+//         var evenodd = ((pickNum%2) === 0 ) ? "Your number is even" : "Your number is odd";
+//         var plus = (pickNum+100);
+//         var posNeg = (pickNum>=0) ? "Your number is positive" : "Your number is odd" ;
+//         alert(evenodd);
+//         alert(plus + " Is your number plus 100");
+//         alert(posNeg);
+//     }
+//     else {
+//         return alert("See you later!");
+//     }
+// }
+//
+// choose()
 
-choose()
 
+var numberList= [.1,.2,.35,.50,1,0];
+var luckyNumber= numberList[Math.floor(Math.random() * numberList.length)];
+console.log(luckyNumber);
+var amtSpent = Number(prompt("What was your total cost of goods?"));
 
-
+alert("you saved " + (luckyNumber*100) + "% or $" + (luckyNumber*amtSpent) + " your total is now $" + (amtSpent- (luckyNumber*amtSpent)))
 
