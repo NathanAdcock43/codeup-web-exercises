@@ -1,6 +1,8 @@
 *, *::before, *::after {
     box-sizing: border-box;
     font-family: sans-serif;
+    text-align: center;
+    font-size: 18pt ;
 }
 
 body {
@@ -23,6 +25,16 @@ body {
     box-shadow: 0 0 10px 2px;
 }
 
+.image1 {
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/UndergroundcityOwariNoSeraph.jpg');
+    border-radius: 50px;
+    padding: 20px 30px;
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .btn-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -41,4 +53,104 @@ body {
 
 .btn:hover {
     border-color: black;
+}
+
+.image2 {
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
+    border-radius: 50px;
+    padding: 20px 30px;
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image3 {
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
+    border-radius: 50px;
+    padding: 20px 30px;
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image4 {
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
+    border-radius: 50px;
+    padding: 20px 30px;
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image5 {
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
+    border-radius: 50px;
+    padding: 20px 30px;
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image6 {
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
+    border-radius: 50px;
+    padding: 20px 30px;
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image7 {
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
+    border-radius: 50px;
+    padding: 20px 30px;
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image8 {
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
+    border-radius: 50px;
+    padding: 20px 30px;
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image9 {
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
+    border-radius: 50px;
+    padding: 20px 30px;
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image10 {
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
+    border-radius: 50px;
+    padding: 20px 30px;
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image11 {
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
+    border-radius: 50px;
+    padding: 20px 30px;
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -1,5 +1,6 @@
-const textElement = document.getElementById('text')
-const optionButtonsElement = document.getElementById('option-buttons')
+const textElement = document.getElementById('text');
+const optionButtonsElement = document.getElementById('option-buttons');
+const gameImage = document.getElementById('image');
 
 let state = {}
 
@@ -14,6 +15,9 @@ function showTextNode(textNodeIndex) {
     while (optionButtonsElement.firstChild) {
         optionButtonsElement.removeChild(optionButtonsElement.firstChild)
     }
+    const scenePic = document.getElementById('pic');
+    const currentImageClass = textNode.image;
+    scenePic.className = currentImageClass;
 
     textNode.options.forEach(option => {
         if (showOption(option)) {
@@ -42,6 +46,7 @@ function selectOption(option) {
 const textNodes = [
     {
         id: 1,
+        image: "image1",
         text: 'You wake up in a strange place and you see a jar of blue goo near you.',
         options: [
             {
@@ -58,6 +63,7 @@ const textNodes = [
     {
         id: 2,
         text: 'You venture forth in search of answers to where you are when you come across a merchant.',
+        image: "image2",
         options: [
             {
                 text: 'Trade the goo for a sword',
@@ -80,6 +86,7 @@ const textNodes = [
     {
         id: 3,
         text: 'After leaving the merchant you start to feel tired and stumble upon a small town next to a dangerous looking castle.',
+        image: "image3",
         options: [
             {
                 text: 'Explore the castle',
@@ -98,6 +105,7 @@ const textNodes = [
     {
         id: 4,
         text: 'You are so tired that you fall asleep while exploring the castle and are killed by some terrible monster in your sleep.',
+        image: "image4",
         options: [
             {
                 text: 'Restart',
@@ -108,6 +116,7 @@ const textNodes = [
     {
         id: 5,
         text: 'Without any money to buy a room you break into the nearest inn and fall asleep. After a few hours of sleep the owner of the inn finds you and has the town guard lock you in a cell.',
+        image: "image5",
         options: [
             {
                 text: 'Restart',
@@ -118,6 +127,7 @@ const textNodes = [
     {
         id: 6,
         text: 'You wake up well rested and full of energy ready to explore the nearby castle.',
+        image: "image6",
         options: [
             {
                 text: 'Explore the castle',
@@ -128,6 +138,7 @@ const textNodes = [
     {
         id: 7,
         text: 'While exploring the castle you come across a horrible monster in your path.',
+        image: "image7",
         options: [
             {
                 text: 'Try to run',
@@ -153,6 +164,7 @@ const textNodes = [
     {
         id: 8,
         text: 'Your attempts to run are in vain and the monster easily catches.',
+        image: "image8",
         options: [
             {
                 text: 'Restart',
@@ -163,6 +175,7 @@ const textNodes = [
     {
         id: 9,
         text: 'You foolishly thought this monster could be slain with a single sword.',
+        image: "image9",
         options: [
             {
                 text: 'Restart',
@@ -173,6 +186,7 @@ const textNodes = [
     {
         id: 10,
         text: 'The monster laughed as you hid behind your shield and ate you.',
+        image: "image10",
         options: [
             {
                 text: 'Restart',
@@ -183,6 +197,7 @@ const textNodes = [
     {
         id: 11,
         text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+        image: "image11",
         options: [
             {
                 text: 'Congratulations. Play Again.',
