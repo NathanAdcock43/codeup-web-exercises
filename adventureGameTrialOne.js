@@ -204,7 +204,93 @@ const textNodes = [
                 nextText: -1
             }
         ]
-    }
-]
+    },
+    {
+        id: 12,
+        text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+        image: "image12",
+        options: [
+            {
+                text: 'Congratulations. Play Again.',
+                nextText: -1
+            }
+        ]
+    },
+    {
+        id: 13,
+        text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+        image: "image13",
+        options: [
+            {
+                text: 'Congratulations. Play Again.',
+                nextText: -1
+            }
+        ]
+    },
+    {
+        id: 14,
+        text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+        image: "image14",
+        options: [
+            {
+                text: 'Congratulations. Play Again.',
+                nextText: -1
+            }
+        ]
+    },
+    {
+        id: 15,
+        text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+        image: "image15",
+        options: [
+            {
+                text: 'Congratulations. Play Again.',
+                nextText: -1
+            }
+        ]
+    },
+    {
+        id: 16,
+        text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+        image: "image16",
+        options: [
+            {
+                text: 'Congratulations. Play Again.',
+                nextText: -1
+            }
+        ]
+    },
+    {
+        id: 17,
+        text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+        image: "image17",
+        options: [
+            {
+                text: 'Congratulations. Play Again.',
+                nextText: -1
+            }
+        ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ]
 
 startGame()

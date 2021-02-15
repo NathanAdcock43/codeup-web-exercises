@@ -25,16 +25,6 @@ body {
     box-shadow: 0 0 10px 2px;
 }
 
-.image1 {
-    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/UndergroundcityOwariNoSeraph.jpg');
-    border-radius: 50px;
-    padding: 20px 30px;
-    display: block;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .btn-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -55,8 +45,18 @@ body {
     border-color: black;
 }
 
+.image1 {
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/SleepingPerson.png');
+    border-radius: 50px;
+    padding: 20px 30px;
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .image2 {
-    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/SleepingPerson.png');
     border-radius: 50px;
     padding: 20px 30px;
     display: block;
@@ -66,7 +66,7 @@ body {
 }
 
 .image3 {
-    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/SleepingPerson.png');
     border-radius: 50px;
     padding: 20px 30px;
     display: block;
@@ -76,7 +76,7 @@ body {
 }
 
 .image4 {
-    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/CityDiscovery.png');
     border-radius: 50px;
     padding: 20px 30px;
     display: block;
