@@ -1,6 +1,6 @@
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Trebuchet MS;
     text-align: center;
     font-size: 18pt ;
 }
@@ -13,36 +13,38 @@ body {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: #333;
+    background-image: url('/Users/nathanadcock/Desktop/Adventure Game Pictures/SleepingPerson.png');
+    background-size: cover;
 }
-
+/*Container where Scene text is displayed along with picture and buttons for option selection*/
 .container {
     width: 800px;
     max-width: 80%;
-    background-color: white;
+    background-color: hsl(207, 63%, 40%);
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px 2px;
 }
-
+/*Button grid allows for option selection for each sequence of the game*/
 .btn-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 10px;
     margin-top: 20px;
 }
-
+/*attributes of each button in the grid*/
 .btn {
-    background-color: hsl(200, 100%, 50%);
-    border: 1px solid hsl(200, 100%, 30%);
-    border-radius: 5px;
+    background-color: #006699;
+    box-shadow: 0 0 10px 2px;
+    border-radius: 10px;
     padding: 5px 10px;
-    color: white;
-    outline: none;
+    margin-left: auto;
 }
 
 .btn:hover {
-    border-color: black;
+    color: white;
+    background-color: black;
+    box-shadow: 0 0 10px 2px;
 }
 
 .image1 {
@@ -56,7 +58,7 @@ body {
 }
 
 .image2 {
-    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/SleepingPerson.png');
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/discovers the city 2 edited 2.png');
     border-radius: 50px;
     padding: 20px 30px;
     display: block;
@@ -66,7 +68,7 @@ body {
 }
 
 .image3 {
-    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/SleepingPerson.png');
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/man in the mist.png');
     border-radius: 50px;
     padding: 20px 30px;
     display: block;
@@ -76,7 +78,7 @@ body {
 }
 
 .image4 {
-    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/CityDiscovery.png');
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/cavernPath.png');
     border-radius: 50px;
     padding: 20px 30px;
     display: block;
@@ -86,17 +88,17 @@ body {
 }
 
 .image5 {
-    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/ancientBridge.JPG');
     border-radius: 50px;
     padding: 20px 30px;
     display: block;
-    width: 70%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .image6 {
-    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/tightropewalker3.png');
     border-radius: 50px;
     padding: 20px 30px;
     display: block;
@@ -106,7 +108,7 @@ body {
 }
 
 .image7 {
-    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/SewerEntrance.png');
     border-radius: 50px;
     padding: 20px 30px;
     display: block;
@@ -116,26 +118,45 @@ body {
 }
 
 .image8 {
-    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/SewerEntrance.png');
     border-radius: 50px;
     padding: 20px 30px;
     display: block;
-    width: 70%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .image9 {
-    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/scaffolding scene-far.png');
     border-radius: 50px;
     padding: 20px 30px;
     display: block;
-    width: 70%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .image10 {
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/scaffolding scene-closer.png');
+    border-radius: 50px;
+    padding: 20px 30px;
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image11 {
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/threehallsgutters2.png');
+    border-radius: 50px;
+    padding: 20px 30px;
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.image12 {
     content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
     border-radius: 50px;
     padding: 20px 30px;
@@ -144,8 +165,43 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-
-.image11 {
+.image13 {
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
+    border-radius: 50px;
+    padding: 20px 30px;
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.image14 {
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
+    border-radius: 50px;
+    padding: 20px 30px;
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.image15 {
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
+    border-radius: 50px;
+    padding: 20px 30px;
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.image16 {
+    content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
+    border-radius: 50px;
+    padding: 20px 30px;
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.image17 {
     content:url('/Users/nathanadcock/Desktop/Adventure Game Pictures/Back alleys.png');
     border-radius: 50px;
     padding: 20px 30px;

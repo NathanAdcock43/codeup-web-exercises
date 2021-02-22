@@ -2,23 +2,27 @@ const textElement = document.getElementById('text');
 const optionButtonsElement = document.getElementById('option-buttons');
 const gameImage = document.getElementById('image');
 
+//empty state object for collecting player status inputs or item inventory inputs
 let state = {}
 
+//function to reset the state of beginning of the game
 function startGame() {
     state = {}
     showTextNode(1)
 }
 
+//function that demonstrates the relationships between each sequence or node of the game
 function showTextNode(textNodeIndex) {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text
     while (optionButtonsElement.firstChild) {
         optionButtonsElement.removeChild(optionButtonsElement.firstChild)
     }
+//function i added to original script that demonstrates the relationships between text node and pics
     const scenePic = document.getElementById('pic');
     const currentImageClass = textNode.image;
     scenePic.className = currentImageClass;
-
+//function that links buttons to text nodes
     textNode.options.forEach(option => {
         if (showOption(option)) {
             const button = document.createElement('button')
@@ -30,6 +34,13 @@ function showTextNode(textNodeIndex) {
     })
 }
 
+//Tried to creat a player generated name that would have been called in text elements of the game
+// var playersName;
+// function assignName(){
+//     playersName = toString(prompt("Welcome What is your Name?"))
+// }
+
+//function that expresses how the game should proceed or terminate
 function showOption(option) {
     return option.requiredState == null || option.requiredState(state)
 }
@@ -42,166 +53,219 @@ function selectOption(option) {
     state = Object.assign(state, option.setState)
     showTextNode(nextTextNodeId)
 }
+// the scenes or text nodes of the game, each linked by button activated options, some options set player
+//status or inventor item status to be checked at later points during game
 
 const textNodes = [
     {
         id: 1,
         image: "image1",
-        text: 'You wake up in a strange place and you see a jar of blue goo near you.',
+        text:   'Vapory wisps of conscientious condense. Slowly you become aware of your hand in course, cold soil. ' +
+                'You attempt to turn your head and it does so slowly, protesting like a rusty hinge. ' +
+                'Your eyes, also slow to respond, adjust to the dim light. You are at the top of a ' +
+                'low ridge and a path winds gradually, towards what you uncertainly decide is ' +
+                'a city',
         options: [
             {
-                text: 'Take the goo',
-                setState: { blueGoo: true },
+                text: 'Continue your observations',
                 nextText: 2
             },
-            {
-                text: 'Leave the goo',
-                nextText: 2
-            }
+
         ]
     },
     {
         id: 2,
-        text: 'You venture forth in search of answers to where you are when you come across a merchant.',
+        text:   'Monolithic towers are intertwined with pipes aimless in their travels. ' +
+                'What you initially took for the dim light of dusk is actually an unsettling ' +
+                'ambient glow which has no definite source. The light is just bright enough to ' +
+                'make out hanging objects above. You fight panic as you look more closely at what you ' +
+                'glimpsed. Stalactites which curve away into darkness. You are underground...',
         image: "image2",
         options: [
             {
-                text: 'Trade the goo for a sword',
-                requiredState: (currentState) => currentState.blueGoo,
-                setState: { blueGoo: false, sword: true },
-                nextText: 3
+                text: 'Travel down the slope toward the City',
+                nextText: 4
             },
             {
-                text: 'Trade the goo for a shield',
-                requiredState: (currentState) => currentState.blueGoo,
-                setState: { blueGoo: false, shield: true },
+                text: 'Turn to follow the path back over the ridge into the unknown',
                 nextText: 3
             },
-            {
-                text: 'Ignore the merchant',
-                nextText: 3
-            }
+
         ]
     },
     {
         id: 3,
-        text: 'After leaving the merchant you start to feel tired and stumble upon a small town next to a dangerous looking castle.',
+        text:   'As you begin walking down the ridge you wonder how you came to be asleep on this trail, ' +
+                'but each effort to recall the truth disrupts your memories like ripples in water. ' +
+                'Your vision starts to dim, but a feeling of peace and familiarity overtakes you. ' +
+                'This will be fine, you have been here before.',
         image: "image3",
         options: [
             {
-                text: 'Explore the castle',
-                nextText: 4
+                text: 'You drift in time and space',
+                nextText: -1
             },
-            {
-                text: 'Find a room to sleep at in the town',
-                nextText: 5
-            },
-            {
-                text: 'Find some hay in a stable to sleep in',
-                nextText: 6
-            }
+
         ]
     },
+//Would like to have a prompt that asks for the player's name here to be stored for later use in dialog
     {
         id: 4,
-        text: 'You are so tired that you fall asleep while exploring the castle and are killed by some terrible monster in your sleep.',
+        text:   'You continue down the slope and the structures only grow marginally larger, they are much further ' +
+                'then you had assumed. Time drags while you walk. You prod your memory and find ' +
+                'that you cannot recall how you arrived here or even who you are. The only shred of your identity ' +
+                'that remains is your name. You say it out loud for reassurance.',
         image: "image4",
         options: [
             {
-                text: 'Restart',
-                nextText: -1
-            }
+                text: 'Travel down the slope toward the City',
+                nextText: 5
+            },
         ]
     },
+//I have two outcomes for a single option (cross the bridge) depending on a required item
     {
         id: 5,
-        text: 'Without any money to buy a room you break into the nearest inn and fall asleep. After a few hours of sleep the owner of the inn finds you and has the town guard lock you in a cell.',
+        text:   'You at last come to a immense bridge which leads into the City. You assume that the bridge ' +
+                'was never intended for foot traffic since it only supports a single narrow rail with ' +
+                'crumbling bricks and mortar sloping off to either side. A wide yet shallow river churns ' +
+                'over slick rock fifty feet below. The trail you are now on continues down to the river\'s ' +
+                'edge in a steep but manageable decent.',
         image: "image5",
         options: [
             {
-                text: 'Restart',
-                nextText: -1
-            }
+                text: 'Cross the bridge balancing on the rail',
+                nextText: 6
+            },
+            {
+                text: 'Cross the bridge using the length of chain as a harness',
+                requiredState: (currentState) => currentState.LengthOfChain,
+                nextText: 7
+            },
+            {
+                text: 'Descend to the river embankment and cross to get a better look at the wall',
+                nextText: 8
+            },
         ]
     },
     {
         id: 6,
-        text: 'You wake up well rested and full of energy ready to explore the nearby castle.',
+        text:   'It is obvious by the time that you step onto the rail that the bridge has not been used in ' +
+                'decades. Aside from the crumbing mortar near it\'s crown, the bridge had developed a' +
+                'general patina of rust and moss. Despite its looks, the rail seems to be solid and holds ' +
+                'securely by its base. You tentatively begin walking foot over foot down the rail\'s length ' +
+                'Halfway from the entrance you begin to feel you have misjudged the situation. At it\'s center ' +
+                'the bridge is nearly fifty feet above the water which seems to be only a foot deep. To make ' +
+                'things worse the cavern air is moving much faster at this height. You only have 50 yards left.' +
+                'You focus on the columns bordering the rail platform. 25 yards. A gust takes you by surprise ' +
+                'and you swing wildly to compensate. Your feet fly out beyond the rail and you rake at the bricks ' +
+                'with your hands trying to find something to hold onto. Nothing is there but slick moss....',
         image: "image6",
         options: [
             {
-                text: 'Explore the castle',
-                nextText: 7
+                text: 'Your fall is fatal',
+                nextText: -1
             }
         ]
     },
     {
         id: 7,
-        text: 'While exploring the castle you come across a horrible monster in your path.',
+        text:   'It is obvious by the time that you step onto the rail that the bridge has not been used in ' +
+                'decades. Aside from the crumbing mortar near it\'s crown, the bridge had developed a' +
+                'general patina of rust and moss. Despite its looks, the rail seems to be solid and holds ' +
+                'securely by its base. You decide that the only safe way to cross is by using a harness. ' +
+                'You un-sling your length of chain, wrap it twice around your waste and attach one hook to the rail. ' +
+                'Your progress will be slow since you will need to stop at each of the rail\'s braces to transfer the ' +
+                'hook, but the added safety will be worth it. You tentatively begin walking foot over foot down' +
+                'the rail\'s length. At it\'s center the bridge is nearly fifty feet above the water which ' +
+                'seems to be only a foot deep. To make things worse the cavern air is moving much faster at this height.' +
+                'You only have 50 yards left. You focus on the columns bordering the rail platform. 25 yards. ' +
+                'A gust takes you by surprise and you begin to sway. The Chain cinches tight around your waste and ' +
+                'you fear that its hook may not hold, however you manage to correct your balance and begin moving again. ' +
+                'You make the rail platform! You collapse onto solid ground, your heart beating wildly...',
         image: "image7",
         options: [
             {
-                text: 'Try to run',
-                nextText: 8
-            },
-            {
-                text: 'Attack it with your sword',
-                requiredState: (currentState) => currentState.sword,
+                text: 'Catch your breath and then check your surroundings',
                 nextText: 9
             },
-            {
-                text: 'Hide behind your shield',
-                requiredState: (currentState) => currentState.shield,
-                nextText: 10
-            },
-            {
-                text: 'Throw the blue goo at it',
-                requiredState: (currentState) => currentState.blueGoo,
-                nextText: 11
-            }
+
         ]
     },
     {
         id: 8,
-        text: 'Your attempts to run are in vain and the monster easily catches.',
+        text:   'The river moves swiftly, but it is shallow. There is slick algae and clumps of moss, ' +
+                'but you manage to keep your feet as you cross. The forty foot city wall rises from the river ' +
+                'and gigantic gutters release a steady stream of cloudy water. You fight the current and ' +
+                'make it to a mound of rubble . While steadying yourself and looking for a way up the wall, ' +
+                'your hand comes to rest on a six foot length of chain with large dull metal hooks on either end. ' +
+                'You consider, then loop the length of chain under one arm and over the other shoulder twice, hooking ' +
+                'it to itself. This maybe useful for climbing or for dragging something. You inspect the wall again ' +
+                'and spy what appears to be scaffolding erected by the wall. The scaffolding looks questionable. ',
         image: "image8",
         options: [
             {
-                text: 'Restart',
-                nextText: -1
+                text: 'Return to the bridge entering the city',
+                setState: { LengthOfChain: true },
+                nextText: 5
+            },
+            {
+                text: 'Climb the scaffolding ',
+                setState: { LengthOfChain: true },
+                nextText: 9
             }
         ]
     },
     {
         id: 9,
-        text: 'You foolishly thought this monster could be slain with a single sword.',
+        text:   'The scaffolding has sunk into the marshy soil near the base of the wall but a bit unevenly ' +
+                'creating a noticeable tilt. All four levels of the structure seem to have intact ' +
+                'ladders, but the final ladder is 15 feet shy of the summit. A gutter large enough to walk into ' +
+                'is 4 feet above the ladder. Using the Length of chain you could possibly climb into it. At this ' +
+                'point you are willing to try it just so you can get out of this cold murky water.',
         image: "image9",
         options: [
             {
-                text: 'Restart',
-                nextText: -1
+                text: 'Climb the Scaffolding and hope for the best',
+                requiredState: (currentState) => currentState.LengthOfChain,
+                nextText: 10
             }
         ]
     },
     {
         id: 10,
-        text: 'The monster laughed as you hid behind your shield and ate you.',
+        text:   'Surprisingly the Scaffolding has held up well with time. The metal ladders are slick' +
+                'and you are cautious as you make your way. You rest at the top ' +
+                'of the last ladder and attempt to use your hooked chain length to span the final distance ' +
+                'into the spout. The spray of water and soreness of your forearms distract you, nevertheless on ' +
+                'your fifth attempt the hook catches. You give the chain a sharp tug to be sure the hook is set, but ' +
+                'the motion dislodges the ladder from the slick wall. You fall and desperately cling to the wet chain. ' +
+                'The chain holds and with trembling arms you climb into the yawning gutter. You lean against the stone ' +
+                'and notice a dull throbbing pain in your lower arm. The lower hook left a three inch cut in your arm ' +
+                'during the fall. It is bleeding steadily, but isn\'t too painful. Nothing can be done for it. You must ' +
+                'keep moving.' ,
         image: "image10",
         options: [
             {
-                text: 'Restart',
-                nextText: -1
+                text: 'Continue deeper into the tunnels',
+                setState: { Bleeding: true },
+                nextText: 11
             }
         ]
     },
     {
         id: 11,
-        text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+        text:   'Notice grates let light in enough to see. walk through a series of tunnels. Hear scratching and squeaking, ' +
+                'see mole ret. it scents you. turn run. See stranger beckoning you to join him',
         image: "image11",
         options: [
             {
-                text: 'Congratulations. Play Again.',
-                nextText: -1
+                text: 'Take the unoccupied second tunnel.',
+                nextText: 12
+            },
+            {
+                text: 'Follow the beckoning figure into the furthest tunnel.',
+                nextText: 13
             }
         ]
     },
@@ -271,8 +335,26 @@ const textNodes = [
             }
         ]
     },
-
-
+    {
+        text: 'Attack it with your sword',
+        requiredState: (currentState) => currentState.sword,
+        nextText: 9
+    },
+    {
+        text: 'Hide behind your shield',
+        requiredState: (currentState) => currentState.shield,
+        nextText: 10
+    },
+    {
+        text: 'Throw the blue goo at it',
+        requiredState: (currentState) => currentState.blueGoo,
+        nextText: 11
+    },
+    {
+        text: 'Return to the bridge entering the city',
+        setState: { sword: true },
+        nextText: 6
+    }
 
 
 
