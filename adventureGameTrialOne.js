@@ -34,11 +34,12 @@ function showTextNode(textNodeIndex) {
     })
 }
 
-//Tried to creat a player generated name that would have been called in text elements of the game
-// var playersName;
-// function assignName(){
-//     playersName = toString(prompt("Welcome What is your Name?"))
-// }
+// Tried to creat a player generated name that would have been called in text elements of the game
+var playersName;
+function assignName(){
+    playersName = toString(prompt("Welcome What is your Name?"))
+}
+assignName()
 
 //function that expresses how the game should proceed or terminate
 function showOption(option) {

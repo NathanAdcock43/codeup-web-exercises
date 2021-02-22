@@ -13,6 +13,14 @@
 //     }
 // }
 
+// Trying to log the odd numbers but problem with "i % 2"
+// for (var i = 1 ; i <= 5 ; i++){
+//     if (i%2 = true){
+//         console.log(i);
+//     } else {
+//
+//     }
+// }
 // showMultiplicationTable(10);
 
 
@@ -23,6 +31,38 @@
 // }
 //
 //     MultiplicationTableOneToTen()
+
+//Kennith and Sam's example
+//
+//Exercise 1:
+// set 1
+// set 2
+// set 3
+// set 4
+//Exercise 1:
+// set 1
+// set 2
+// set 3
+// set 4
+//
+//  for (var exLoop = 1; exLoop <= 4; exLoop++){
+//    console.log("Exercise " + exLoop + ":");
+//
+//      for (var setLoop = 1; setLoop <= 3; setLoop++){
+//          console.log("Set " + setLoop);
+//      }
+//  }
+//
+// or alternatively
+//
+// function listSets(numberOfSets)(var exLoop = 1; exLoop <= numberOfSets; exLoop++){
+//    console.log("Exercise " + exLoop + ":");
+//
+//      for (var setLoop = 1; setLoop <= 3; setLoop++){
+//          console.log("Set " + setLoop);
+//      }
+//  }
+//
 
 //Exercise 2
 
@@ -62,6 +102,9 @@
 // 7777777
 // 88888888
 // 999999999
+//
+// function shapeLoop = (width, height); This was the example that Samuel gave to help explain
+// in settings ungroup similar to see the output expanded
 //
 //     for (var i = 1; i <= 9; i++) {
 //         var output = "";
