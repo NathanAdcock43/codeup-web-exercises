@@ -55,8 +55,10 @@
 // for (var i = 1; i <= 50; i = i + 2){
 //     if (i === pickNum){
 //         console.log("Yikes! Skipping number: " + i);
-//         continue}
-//     console.log("Here is an odd number: " + i)}
+//         continue
+//     }
+//     console.log("Here is an odd number: " + i)
+// }
 
 
 
