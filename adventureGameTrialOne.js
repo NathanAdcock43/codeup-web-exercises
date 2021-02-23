@@ -178,17 +178,12 @@ const textNodes = [
                 'You un-sling your length of chain, wrap it twice around your waste and attach one hook to the rail. ' +
                 'Your progress will be slow since you will need to stop at each of the rail\'s braces to transfer the ' +
                 'hook, but the added safety will be worth it. You tentatively begin walking foot over foot down' +
-                'the rail\'s length. At it\'s center the bridge is nearly fifty feet above the water which ' +
-                'seems to be only a foot deep. To make things worse the cavern air is moving much faster at this height.' +
-                'You only have 50 yards left. You focus on the columns bordering the rail platform. 25 yards. ' +
-                'A gust takes you by surprise and you begin to sway. The Chain cinches tight around your waste and ' +
-                'you fear that its hook may not hold, however you manage to correct your balance and begin moving again. ' +
-                'You make the rail platform! You collapse onto solid ground, your heart beating wildly...',
+                'the rail\'s length',
         image: "image7",
         options: [
             {
-                text: 'Catch your breath and then check your surroundings',
-                nextText: 9
+                text: 'Continue...',
+                nextText: 12
             },
 
         ]
@@ -270,14 +265,22 @@ const textNodes = [
             }
         ]
     },
+
+    //This is he branch that involved crossing the bridge (branch 2)
+
     {
         id: 12,
-        text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+        text:   'At it\'s center the bridge is nearly fifty feet above the water which ' +
+                'seems to be only a foot deep. To make things worse the cavern air is moving much faster at this height.' +
+                'You only have 50 yards left. You focus on the columns bordering the rail platform. 25 yards. ' +
+                'A gust takes you by surprise and you begin to sway. The Chain cinches tight around your waste and ' +
+                'you fear that its hook may not hold, however you manage to correct your balance and begin moving again. ' +
+                'You make the rail platform! You collapse onto solid ground, your heart beating wildly...',
         image: "image12",
         options: [
             {
-                text: 'Congratulations. Play Again.',
-                nextText: -1
+                text: 'Catch your breath, before proceeding',
+                nextText: 13
             }
         ]
     },
