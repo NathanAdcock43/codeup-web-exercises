@@ -60,7 +60,28 @@
      *  > first([1, 2, 3, 4, 5]) // returns 1
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
+     *
+
      */
+
+    function first1(arr){
+        return arr[0];
+    }
+
+    function second(arr){
+        return arr[0];
+    }
+
+    function last(arr){
+        return arr[arr.length - 1];
+    }
+
+    console.log(namesMarx);
+    console.log(first1(namesMarx));
+    console.log(second(namesMarx));
+    console.log(last(namesMarx));
+
+
     var first = [1, 2, 3, 4, 5]
     function printOne(){
         console.log(first[0])
