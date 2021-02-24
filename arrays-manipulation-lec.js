@@ -147,6 +147,7 @@
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 
 
+
 // ============================= Split / Join
 
 // splitting string into and array
@@ -169,6 +170,7 @@
 // var bondsString = bondsArray.join("_");
 
 
+
 // TODO DEMONSTRATION: Create a function that will take in a formatted string of numbers
 //  and return an array of phone numbers without any symbols. Log the output of the returned array.
 
@@ -180,6 +182,8 @@
        2305552020
        5125553030
 */
+
+var phoneNumbers = 
 
 // var phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
 //
