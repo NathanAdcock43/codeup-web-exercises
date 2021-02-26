@@ -58,11 +58,12 @@ var shoppers = [
 ];
 
 shoppers.forEach(function(shopper){
-    var newTotal = shopper.amount - (shopper.amount * .12);
-    if (shopper.amount >= 200) {
-        console.log(shopper.name + " you received a 12% discount. Your new total is " + newTotal);
+    var newAmount = shopper.amount - (shopper.amount * .12);
+    var  discount = shopper.amount * .12;
+    if (shopper.amount > 200) {
+        console.log(shopper.name + " you received a 12% discount worth " + discount.toFixed(2) +" dollars. Your new total is $" + newAmount.toFixed(2));
     } else {
-        console.log(shopper.name + " your total is " + shopper.amount);
+        console.log(shopper.name + " your total is $" + shopper.amount.toFixed(2) + " you missed out on the 12% by $" + (200 - shopper.amount).toFixed(2));
     }
 
 });
@@ -119,6 +120,7 @@ shoppers.forEach(function(shopper){
     //     console.log("Book # " + book.id);
     //     console.log("Title: " + book.title);
     //     console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+    //     console.log("---")
     // });
 
     /**
@@ -213,6 +215,7 @@ function createBook (title, firstName, lastName){
             console.log("Book # " + book.id);
             console.log("Title: " + book.title);
             console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+            console.log("---")
         });
 
 
