@@ -158,11 +158,14 @@ shoppers.forEach(function(shopper){
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-var firstBookTitle = "The Grapes of Wrath";
+
+
+
+    //first bonus question CreateBook
 
     var books = [
         {id : 1,
-            title : firstBookTitle,
+            title : "The Grapes of Wrath",
             author : {
                 firstName: "John",
                 lastName: "Steinbeck",
@@ -198,13 +201,12 @@ var newAuthorLast = prompt("What is the last name of the Author of this title?")
 
 function createBook (title, firstName, lastName){
         var id = books.length + 1;
-        var newBook = {id : id,
+        return {id : id,
             title : title,
             author : {
                 firstName: firstName,
                 lastName: lastName,
-            }}
-        return newBook;
+            }};
     }
 
     books.push (createBook(newTitle, newAuthorFirst, newAuthorLast))
@@ -218,5 +220,20 @@ function createBook (title, firstName, lastName){
             console.log("---")
         });
 
+
+
+
+
+
+    //second bonus question ShowBook Info
+function showBookInfo (bookObject){
+    console.log("Book # " + bookObject.id);
+    console.log("Title: " + bookObject.title);
+    console.log("Author: " + bookObject.author.firstName + " " + bookObject.author.lastName);
+    console.log("---")
+}
+books.forEach(function (book){
+    showBookInfo(book);
+});
 
 })();
