@@ -46,18 +46,134 @@
 //google search js
 
 
-function startsAndEndsWithVowel(x) {
-
-    var endChar = x.indexOf(-1);
-    var firstChar = x.indexOf (0);
-
-    if (endChar === /[^aeiou]/gi || firstChar === /[^aeiou]/gi){
+// function startsAndEndsWithVowel(x) {
+//
+//     var endChar = x.indexOf(-1);
+//     var firstChar = x.indexOf (0);
+//
+//     if (endChar === /[^aeiou]/gi || firstChar === /[^aeiou]/gi){
+//         return true
+//     }
+//     else return false;
+// }
+//
+//
+// console.log(startsAndEndsWithVowel("ubuntu"));// true, "Exercise 49");
+// console.log(startsAndEndsWithVowel("banana"));// false, "Exercise 49");
+// console.log(startsAndEndsWithVowel("mango"));// false, "Exercise 49");
+//
+// //Test from March 1st
+//
+// /**
+//  * Write your solutions here.
+//  *
+//  * **Note**: While normally it is good practice to wrap your javascript in an
+//  * immediately invoked function expression (iife), you should _not_ do that
+//  * here. If you do, the automated tests will not be able to see your functions.
+//  */
+//
+// Question 1:
+function isANumber(num){
+    if (typeof (num) === 'number'){
         return true
+    }else{
+        return false
     }
-    else return false;
 }
 
+//parseFloat(!NaN)
+//
+// // Question 2:
+// function increment(num){
+//     if (isANumber(num)){
+//         return num + 1
+//     }else{
+//         return false
+//     }
+// }
+//
+// // Question 3:
+// function decrement(num){
+//     if (isANumber(num)){
+//         return num - 1
+//     }else{
+//         return false
+//     }
+// }
+//
+// // Question 4: Not Correct
+// function getHighestNumber(x, y, z){
+//     var sorted = [...x,y,z].sort((a,b)=>b-a);
+//     var firstChar = sorted.unshift()
+//     if (isANumber(x) && isANumber(y) && isANumber(z)){
+//         return firstChar;
+//     }else{
+//         return false
+//     }
+// }
+//
+// //math.max
+//
+// // Question 5:
+// function parseNumber(num) {
+//     return Number(num);
+// }
+//
+// // Question 6: Not correct
+//
+// function add(x, y){
+//     if (isANumber(x) && isANumber(y)) {
+//         return x + y
+//     }else{
+//         return false
+//     }
+// }
+//
+// // Question 7:
+// function multiply(x, y){
+//     if (isANumber(x) && isANumber(y)) {
+//         return x * y
+//     }else{
+//         return false
+//     }
+// }
+//
+// // Question 8:
+// function square(x){
+//     if (isANumber(x)) {
+//         return x * x
+//     }else{
+//         return false
+//     }
+// }
+//
+// // Question 9:
+// function sumOfSquares(x, y){
+//     if (isANumber(x) && isANumber(y)) {
+//         return ((x * x) + (y * y));
+//     }else{
+//         return false
+//     }
+// }
 
-console.log(startsAndEndsWithVowel("ubuntu"));// true, "Exercise 49");
-console.log(startsAndEndsWithVowel("banana"));// false, "Exercise 49");
-console.log(startsAndEndsWithVowel("mango"));// false, "Exercise 49");
+// Question 10:
+// function isPalindrome(x){
+//     var reverseX = x.reverse();
+//     if (isANumber(x)) {
+//         return false;
+//     }else if (x === reverseX){
+//         return true;
+//     }
+// }
+
+
+function isPalindrome(input){
+         if (isANumber(input)) {
+            return false;
+         }else if(input.toLowerCase() === input.split("").reverse().join("").toLowerCase()){
+         return true;
+         }}
+
+console.log(isPalindrome("145"));;
+
+//            Bob becomes bob        becomes array/ reverse/ make string/ lowercase
