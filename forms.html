@@ -5,37 +5,56 @@
     <title>Register With Us</title>
 </head>
 <body>
-     <form method="POST" action="https://request-inspector.glitch.me/">
+     <form method="POST" action="https://www.elformo.com/forms/0f429de4-7178-4217-862c-4a6fa8aaf6d4/">
+
          <label for="email">Enter your email address</label>
+
          <br>
-         <input id="email" name="email" type="email">
+
+         <input id="email" name="email" type="email" value="email" placeholder="Email">
+
          <br>
+
          <label for="password">Enter your password</label>
+
          <br>
-         <input id="password" name="password" type="password">
+
+         <input id="password" name="password" type="password" value="password" placeholder="Password">
+
          <br>
+
          <label for="bio">Tell us a little about yourself</label>
+
          <br>
-         <textarea id="bio" name="bio"></textarea>
+
+         <textarea id="bio" name="bio" cols="30" rows="10" placeholder="Tell us here"></textarea>
+
          <br>
-         <label for="how">How did you hear about us?</label>
+
+         <label>How did you hear about us?</label>
          <br>
-         A)  A friend <input id="how" type="radio" name="how 1" value="a"><br>
-         B)  The internet <input type="radio" name="how 2" value="b"><br>
-         C)  A plane with a banner attached <input type="radio" name="how 3" value="c"><br>
-         D)  Your mom <input type="radio" name="how 4" value="d"><br>
+<!--         <input id="how" type="radio" name="how 1" value="a">A)  A friend <br>-->
+<!--         <input type="radio" name="how 2" value="b">B)  The internet <br>-->
+<!--         <input type="radio" name="how 3" value="c">C)  A plane with a banner attached <br>-->
+<!--         <input type="radio" name="how 4" value="d">D)  Your mom <br>-->
+<!--             <br>-->
+
+         <label><input type="checkbox" name="heardOfUs 1" value="a">A)  A friend </label> <br>
+         <label><input type="checkbox" name="heardOfUs 2" value="b">B)  The internet </label> <br>
+         <label><input type="checkbox" name="heardOfUs 3" value="c">C)  A plane with a banner attached </label> <br>
+         <label><input type="checkbox" name="heardOfUs 4" value="d">D)  Print media </label> <br>
          <br>
-         <label for="browser">Let us know what browser you are using</label>
-         <br>
-         <select id = "browser" name="browser">
-             <option value="choose">choose one</option>
-             <option value="net">Netscape</option>
-             <option value="mos">Mosaic</option>
-             <option value="aol">AOL</option>
+             <label for="browser">Let us know what browser you are using</label>
+             <br>
+             <select id = "browser" name="browser">
+                 <option value="choose">choose one</option>
+                 <option value="net">Netscape</option>
+                 <option value="mos">Mosaic</option>
+                 <option value="aol">AOL</option>
          </select>
          <br>
          <br>
-         <button type="submit">Submit</button>
+         <button type="submit" VALUE="Submit">Submit</button>
      </form>
 </body>
 </html>
