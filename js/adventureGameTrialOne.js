@@ -152,21 +152,26 @@ const textNodes = [
     {
         id: 6,
         text:   'It is obvious by the time that you step onto the rail that the bridge has not been used in ' +
-                'decades. Aside from the crumbing mortar near it\'s crown, the bridge had developed a' +
+                'decades. Aside from the crumbing mortar near it\'s crown, the bridge had developed a ' +
                 'general patina of rust and moss. Despite its looks, the rail seems to be solid and holds ' +
                 'securely by its base. You tentatively begin walking foot over foot down the rail\'s length ' +
                 'Halfway from the entrance you begin to feel you have misjudged the situation. At it\'s center ' +
                 'the bridge is nearly fifty feet above the water which seems to be only a foot deep. To make ' +
-                'things worse the cavern air is moving much faster at this height. You only have 50 yards left.' +
+                'things worse the cavern air is moving much faster at this height. You only have 50 yards left. ' +
                 'You focus on the columns bordering the rail platform. 25 yards. A gust takes you by surprise ' +
                 'and you swing wildly to compensate. Your feet fly out beyond the rail and you rake at the bricks ' +
-                'with your hands trying to find something to hold onto. Nothing is there but slick moss....',
+                'with your hands trying to find something to hold onto. Nothing is there but slick moss....' +
+                'Your fall is fatal',
         image: "image6",
         options: [
             {
-                text: 'Your fall is fatal',
+                text: 'Start back at the beginning',
                 nextText: -1
-            }
+            },
+            {
+                text: 'Go back and try another option',
+                nextText: 5
+            },
         ]
     },
     {
@@ -177,7 +182,7 @@ const textNodes = [
                 'securely by its base. You decide that the only safe way to cross is by using a harness. ' +
                 'You un-sling your length of chain, wrap it twice around your waste and attach one hook to the rail. ' +
                 'Your progress will be slow since you will need to stop at each of the rail\'s braces to transfer the ' +
-                'hook, but the added safety will be worth it. You tentatively begin walking foot over foot down' +
+                'hook, but the added safety will be worth it. You tentatively begin walking foot over foot down ' +
                 'the rail\'s length',
         image: "image7",
         options: [
@@ -230,7 +235,7 @@ const textNodes = [
     },
     {
         id: 10,
-        text:   'Surprisingly the Scaffolding has held up well with time. The metal ladders are slick' +
+        text:   'Surprisingly the Scaffolding has held up well with time. The metal ladders are slick ' +
                 'and you are cautious as you make your way. You rest at the top ' +
                 'of the last ladder and attempt to use your hooked chain length to span the final distance ' +
                 'into the spout. The spray of water and soreness of your forearms distract you, nevertheless on ' +
@@ -271,11 +276,12 @@ const textNodes = [
     {
         id: 12,
         text:   'At it\'s center the bridge is nearly fifty feet above the water which ' +
-                'seems to be only a foot deep. To make things worse the cavern air is moving much faster at this height.' +
+                'seems to be only a foot deep. To make things worse the cavern air is moving much faster at this height. ' +
                 'You only have 50 yards left. You focus on the columns bordering the rail platform. 25 yards. ' +
                 'A gust takes you by surprise and you begin to sway. The Chain cinches tight around your waste and ' +
                 'you fear that its hook may not hold, however you manage to correct your balance and begin moving again. ' +
-                'You make the rail platform! You collapse onto solid ground, your heart beating wildly...',
+                'You make the rail platform! You climb around a rusting passenger car and collapse onto solid ground, ' +
+                'your heart beating wildly...',
         image: "image12",
         options: [
             {

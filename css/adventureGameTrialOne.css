@@ -158,7 +158,7 @@ body {
     margin-right: auto;
 }
 .image12 {
-    content:url('../adventuregameimages/Back alleys.png');
+    content:url('../adventuregameimages/ExhaustedOnPlatform.png');
     border-radius: 50px;
     padding: 20px 30px;
     display: block;
@@ -167,11 +167,11 @@ body {
     margin-right: auto;
 }
 .image13 {
-    content:url('../adventuregameimages/Back alleys.png');
+    content:url('../adventuregameimages/Inside the city.png');
     border-radius: 50px;
     padding: 20px 30px;
     display: block;
-    width: 70%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
