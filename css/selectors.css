@@ -55,7 +55,7 @@ a:hover{
 body {
     font-family: ComputerType, sans-serif;
     font-size: larger;
-    background: #D0E4F5;
+    background: #D0E4F5
     url("../adventuregameimages/pacman-ghosts.png") repeat-x scroll 50% 0;
     color: #006699;
     background-size: 5%;
@@ -63,6 +63,7 @@ body {
 
 ol, ul {
     list-style: url("../adventuregameimages/pac-man-cherries-small2.png");
+    padding: 10px;
 }
 
 .list {
@@ -180,13 +181,32 @@ ol, ul {
 }
 
 table{
+    padding: 15px;
     border: thick solid dodgerblue ;
     font-size: 18px;
+    border-spacing: 30px;
+}
+
+.table1 .popUp5 {
+    visibility: hidden;
+    width: 120px;
+    background-image:  url("../adventuregameimages/pacman-chasing1.png");
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: 65px;
+    border-radius: 70px;
+    padding: 70px 0;
+    position: absolute;
+}
+
+.table1 :hover .popUp5 {
+    visibility: visible;
 }
 
 th{
     border: thick solid crimson;
     padding: 5px;
+
 }
 
 td {
