@@ -236,8 +236,8 @@ const textNodes = [
     {
         id: 10,
         text:   'Surprisingly the Scaffolding has held up well with time. The metal ladders are slick ' +
-                'and you are cautious as you make your way. You rest at the top ' +
-                'of the last ladder and attempt to use your hooked chain length to span the final distance ' +
+                'and you are cautious as you make your way. You perch at the top ' +
+                'of the final ladder and attempt to use your hooked chain length to span the final distance ' +
                 'into the spout. The spray of water and soreness of your forearms distract you, nevertheless on ' +
                 'your fifth attempt the hook catches. You give the chain a sharp tug to be sure the hook is set, but ' +
                 'the motion dislodges the ladder from the slick wall. You fall and desperately cling to the wet chain. ' +
@@ -256,17 +256,32 @@ const textNodes = [
     },
     {
         id: 11,
-        text:   'Notice grates let light in enough to see. walk through a series of tunnels. Hear scratching and squeaking, ' +
-                'see mole ret. it scents you. turn run. See stranger beckoning you to join him',
+        text:   'The spout that you have entered is wide enough for you to walk hunched. After 30 yards the shoot opens into a ' +
+                'sewer maintenance tunnel. Grating fifty feet above lets in enough light to see by. A shallow canal drains towards ' +
+                'you and a raised walkway traces the adjacent wall on which a number of smaller passages open. ' +
+                'You climb onto the gangway and begin to peer into each of the passages. As you do this a scrapping noise attracts your ' +
+                'attention. A foot long creature has crawled out of the water near where you exited. It walks on four legs, hairless, and ' +
+                'appears to be blind. It sniffs the ground with an elongated, fanged snout and begins to lick blood that must have come from ' +
+                'your wound. You realized that a trail of spattered blood reaches from you to this hideous thing. You shift your weight to ' +
+                'leave down the closest passage and it reacts, by running in your direction. You bolt as you see another larger sewer thing ' +
+                'give chase. After a series of rapid tunnel changes you come to another chamber this time with two exits. Near the furthest exit ' +
+                'a startled bedraggled man peers at you open mouthed. From where you came you hear the scratching of claws on stone and it sounds ' +
+                'to you that a few sewer things have now become a pack. The man hears, shoots you an anxious look, considers, and then beckons you ' +
+                'to his exit. ',
+
         image: "image11",
         options: [
             {
+                text: 'Enough running, time to fight',
+                nextText: 13
+            },
+            {
                 text: 'Take the unoccupied second tunnel.',
-                nextText: 12
+                nextText: 14
             },
             {
                 text: 'Follow the beckoning figure into the furthest tunnel.',
-                nextText: 13
+                nextText: 15
             }
         ]
     },
@@ -292,13 +307,23 @@ const textNodes = [
     },
     {
         id: 13,
-        text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+        text:   'You do not remember anything of your previous life, but you sense that you are no stranger to violence. ' +
+                'You turn ready to face the disgusting sewer dwelling creature with just your fists and your determination. ' +
+                'From the dimness comes a wave of fleshy bodies and white bulbous eyes. They climb on one another in their ' +
+                'frenzy to get to the source of the blood. You stomp and punch down ward but you are immediately overwhelmed ' +
+                'by the mass of creatures. You fall, and gaze back down the hall at the curious figure retreating into the last ' +
+                'passage. Teeth, bodies, and nothing more.',
+
         image: "image13",
         options: [
             {
-                text: 'Congratulations. Play Again.',
+                text: 'Start back at the beginning.',
                 nextText: -1
-            }
+            },
+            {
+                text: 'Go back and try another option',
+                nextText: 11
+            },
         ]
     },
     {
