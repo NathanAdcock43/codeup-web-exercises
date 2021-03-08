@@ -8,14 +8,16 @@
 /*  selector for all "h1" elements
     that are a descendent of id="container"
     and have a class of "fancy-header" */
-h1 > #container.fancy-header {
+ #container h1.fancy-header {
+    font-family: ComputerType, sans-serif;
+     font-size: xxx-large;
     color: blue;
-    text-decoration: underline;
+    text-decoration: underline darkorange;
 }
 
 h1.fancy-header{
     color: blue;
-    text-decoration: underline;
+    text-decoration: underline darkorange;
 }
 
 /* selector for all "em" elements */
@@ -32,15 +34,163 @@ h1.fancy-header{
     that are a direct child of an element with class="article" */
 a {
     float:right;
-
 }
 
+a:link{
+    color: dodgerblue;
+}
+
+a:active{
+    color: dodgerblue;
+}
+
+a:visited{
+    color: darkorange;
+}
+
+a:hover{
+    background: cadetblue;
+}
 
 body {
-    background: #D0E4F5
-    url("https://htmlcheatsheet.com/images/logo-css.png") repeat-x local 50% 0%;
+    font-family: ComputerType, sans-serif;
+    font-size: larger;
+    background: #D0E4F5;
+    url("../adventuregameimages/pacman-ghosts.png") repeat-x scroll 50% 0;
+    color: #006699;
+    background-size: 5%;
 }
 
 ol, ul {
-    list-style: image("https://htmlcheatsheet.com/images/logo-css.png");
+    list-style: url("../adventuregameimages/pac-man-cherries-small2.png");
 }
+
+.list {
+    font-weight: bold;
+    font-size: 25px;
+    color: #006699;
+}
+
+/*.list:hover {*/
+/*    color:blue;*/
+/*}*/
+/*li{*/
+/*    list-style: none;*/
+/*}*/
+/*li::before{*/
+/*    content: '';*/
+/*    display: inline-block;*/
+/*    height: 10px;*/
+/*    width: 10px;*/
+/*    background-image: url("../adventuregameimages/pac-man-cherries.jpg");*/
+/*}*/
+
+
+.list .popUp1 {
+    visibility: hidden;
+    width: 120px;
+    background-image: url("../adventuregameimages/pacman-ghosts4.png");
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: right;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    text-decoration: cadetblue;
+    text-decoration-line: underline;
+    text-decoration-thickness: 4px;
+    border-radius: 6px;
+    padding: 3px 0;
+    position: absolute;
+}
+
+.list .popUp2 {
+    visibility: hidden;
+    width: 120px;
+    background-image: url("../adventuregameimages/pacman-ghosts1.png");
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: right;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    text-decoration: crimson;
+    text-decoration-line: underline;
+    text-decoration-thickness: 4px;
+    border-radius: 6px;
+    padding: 3px 0;
+    position: absolute;
+}
+
+.list .popUp3 {
+    visibility: hidden;
+    width: 120px;
+    background-image: url("../adventuregameimages/pacman-ghosts3.png");
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: right;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    text-decoration: hotpink;
+    text-decoration-line: underline;
+    text-decoration-thickness: 4px;
+    border-radius: 6px;
+    padding: 3px 0;
+    position: absolute;
+}
+
+.list .popUp4 {
+    visibility: hidden;
+    width: 120px;
+    background-image: url("../adventuregameimages/pacman-ghosts2.png");
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: right;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    text-decoration: darkorange;
+    text-decoration-line: underline;
+    text-decoration-thickness: 4px;
+    border-radius: 6px;
+    padding: 3px 0;
+    position: absolute;
+}
+.list :hover .popUp1 {
+    visibility: visible;
+}
+
+.list :hover .popUp2 {
+    visibility: visible;
+}
+
+.list :hover .popUp3 {
+    visibility: visible;
+}
+
+.list :hover .popUp4 {
+    visibility: visible;
+}
+
+/*already had done this before we had the talk about using links*/
+@font-face {
+    font-family: "ComputerType";
+    src: url("../fonts/DotGothic16/DotGothic16-Regular.ttf") format("TrueType");
+}
+
+table{
+    border: thick solid dodgerblue ;
+    font-size: 18px;
+}
+
+th{
+    border: thick solid crimson;
+    padding: 5px;
+}
+
+td {
+    border: thick solid darkorange;
+    padding: 5px;
+}
+
