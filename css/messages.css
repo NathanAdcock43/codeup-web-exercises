@@ -35,8 +35,8 @@ body, html {
 
 .message-error{
     padding: 1em;
-    color: #800000;
-    background: #10101c;
+    color: maroon;
+    background: lightpink;
     margin: 10px;
     border-radius: 6px;
     border: solid lightgray thin;
