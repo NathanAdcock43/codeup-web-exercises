@@ -87,8 +87,9 @@ ol, ul {
 /*}*/
 
 
-.list .popUp1 {
-    visibility: hidden;
+
+.popUp1:hover {
+
     width: 120px;
     background-image: url("../adventuregameimages/pacman-ghosts4.png");
     background-size: 25%;
@@ -101,12 +102,13 @@ ol, ul {
     text-decoration-line: underline;
     text-decoration-thickness: 4px;
     border-radius: 6px;
-    padding: 3px 0;
+    padding: 0px 0;
     position: absolute;
 }
 
-.list .popUp2 {
-    visibility: hidden;
+
+.popUp2:hover {
+
     width: 120px;
     background-image: url("../adventuregameimages/pacman-ghosts1.png");
     background-size: 25%;
@@ -119,12 +121,12 @@ ol, ul {
     text-decoration-line: underline;
     text-decoration-thickness: 4px;
     border-radius: 6px;
-    padding: 3px 0;
+    padding: 0px 0;
     position: absolute;
 }
 
-.list .popUp3 {
-    visibility: hidden;
+.popUp3:hover {
+
     width: 120px;
     background-image: url("../adventuregameimages/pacman-ghosts3.png");
     background-size: 25%;
@@ -137,12 +139,12 @@ ol, ul {
     text-decoration-line: underline;
     text-decoration-thickness: 4px;
     border-radius: 6px;
-    padding: 3px 0;
+    padding: 0px 0;
     position: absolute;
 }
 
-.list .popUp4 {
-    visibility: hidden;
+.popUp4:hover {
+
     width: 120px;
     background-image: url("../adventuregameimages/pacman-ghosts2.png");
     background-size: 25%;
@@ -155,24 +157,10 @@ ol, ul {
     text-decoration-line: underline;
     text-decoration-thickness: 4px;
     border-radius: 6px;
-    padding: 3px 0;
+    padding: 0px 0;
     position: absolute;
 }
-.list :hover .popUp1 {
-    visibility: visible;
-}
 
-.list :hover .popUp2 {
-    visibility: visible;
-}
-
-.list :hover .popUp3 {
-    visibility: visible;
-}
-
-.list :hover .popUp4 {
-    visibility: visible;
-}
 
 /*already had done this before we had the talk about using links*/
 @font-face {
