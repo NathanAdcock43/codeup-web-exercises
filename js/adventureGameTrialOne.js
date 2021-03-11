@@ -263,11 +263,11 @@ const textNodes = [
                 'attention. A foot long creature has crawled out of the water near where you exited. It walks on four legs, hairless, and ' +
                 'appears to be blind. It sniffs the ground with an elongated, fanged snout and begins to lick blood that must have come from ' +
                 'your wound. You realized that a trail of spattered blood reaches from you to this hideous thing. You shift your weight to ' +
-                'leave down the closest passage and it reacts, by running in your direction. You bolt as you see another larger sewer thing ' +
+                'leave down the closest passage and it reacts by running in your direction. You bolt as you see another larger sewer thing ' +
                 'give chase. After a series of rapid tunnel changes you come to another chamber this time with two exits. Near the furthest exit ' +
-                'a startled bedraggled man peers at you open mouthed. From where you came you hear the scratching of claws on stone and it sounds ' +
-                'to you that a few sewer things have now become a pack. The man hears, shoots you an anxious look, considers, and then beckons you ' +
-                'to his exit. ',
+                'a startled bedraggled man peers at you open mouthed. From where you came you hear the scratching of claws on stone and it sounds, ' +
+                'to you, that a few sewer things have now become a pack. The man hears, looks at you anxiously, considers, and then beckons you ' +
+                'to follow him. ',
 
         image: "image11",
         options: [

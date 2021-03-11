@@ -129,7 +129,7 @@ body {
 }
 
 .image9 {
-    content:url('../adventuregameimages/scaffolding scene-far.png');
+    content:url('../adventuregameimages/scaffolding scene-far1.png');
     border-radius: 50px;
     padding: 20px 30px;
     display: block;
@@ -139,7 +139,7 @@ body {
 }
 
 .image10 {
-    content:url('../adventuregameimages/scaffolding scene-closer.png');
+    content:url('../adventuregameimages/scaffolding scene-closer1.png');
     border-radius: 50px;
     padding: 20px 30px;
     display: block;
@@ -167,7 +167,7 @@ body {
     margin-right: auto;
 }
 .image13 {
-    content:url('../adventuregameimages/characterSwarmed1.png');
+    content:url('../adventuregameimages/characterSwarmed2.png');
     border-radius: 50px;
     padding: 20px 30px;
     display: block;
