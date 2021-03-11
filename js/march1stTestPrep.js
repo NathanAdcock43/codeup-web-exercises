@@ -494,6 +494,15 @@ function isPalindrome(x){
     }
 }
 
+function firstEnd(input){
+    var together = input.shift() + input.pop();
+    var newArray = [];
+    newArray = together.split("");
+    return newArray;
+
+}
+
+console.log(firstEnd(["a", "b", "c", "d"]));
 
 //return input.tolowercase() === input.split("").reverse().join("").tolowercase();
 //            Bob becomes bob        becomes array/ reverse/ make string/ lowercase

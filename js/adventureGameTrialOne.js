@@ -339,12 +339,13 @@ const textNodes = [
     },
     {
         id: 15,
-        text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+        text:   'You sprint foreword propelled by fear of the impending swarm of sewer creatures. The stranger has already ' +
+                'disappeared down his tunnel. As you turn to follow',
         image: "image15",
         options: [
             {
-                text: 'Congratulations. Play Again.',
-                nextText: -1
+                text: 'Follow the stranger into the city',
+                nextText: 16
             }
         ]
     },

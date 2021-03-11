@@ -2,7 +2,7 @@
     --main-bg: #E6ECF0;
     --link-color: #3B94D9;
     --main-link-color: #848487;
-    --light-bg: #FFF;
+    --light-bg: #ffffff;
     --separator-color: #DDD;
 }
 * {
@@ -119,6 +119,7 @@ a {
 }
 .profile-items{
     padding: unset;
+    list-style: none;
 }
 .profile-entry{
     margin: .5em;

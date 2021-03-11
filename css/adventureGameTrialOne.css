@@ -1,10 +1,19 @@
+
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: Trebuchet MS;
+    font-family: mainNarration, "Trebuchet MS", Arial;
     text-align: center;
-    font-size: 18pt ;
+    font-size: 25pt ;
+    margin: 10px 10px 10px 30px;
+
 }
 
+@font-face {
+    font-family: "mainNarration";
+    src: url("../fonts/Neucha/Neucha-Regular.ttf") format("TrueType");
+}
+
+/*Background and the container positioning */
 body {
     padding: 0;
     margin: 0;
@@ -40,6 +49,9 @@ body {
     border-radius: 10px;
     padding: 5px 10px;
     margin-left: auto;
+    /*margin-right: auto;*/
+    /*width: calc(88% - 1px);*/
+    /*height: auto;*/
 }
 
 .btn:hover {
@@ -185,11 +197,11 @@ body {
     margin-right: auto;
 }
 .image15 {
-    content:url('../adventuregameimages/Back alleys.png');
+    content:url('../adventuregameimages/sewerstoreroomExit.png');
     border-radius: 50px;
     padding: 20px 30px;
     display: block;
-    width: 70%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
