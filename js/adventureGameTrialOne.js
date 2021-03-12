@@ -91,7 +91,6 @@ const textNodes = [
                 text: 'Turn to follow the path back over the ridge into the unknown',
                 nextText: 3
             },
-
         ]
     },
     {
@@ -106,7 +105,6 @@ const textNodes = [
                 text: 'You drift in time and space',
                 nextText: -1
             },
-
         ]
     },
 //Would like to have a prompt that asks for the player's name here to be stored for later use in dialog
@@ -339,8 +337,9 @@ const textNodes = [
     },
     {
         id: 15,
-        text:   'You sprint foreword propelled by fear of the impending swarm of sewer creatures. The stranger has already ' +
-                'disappeared down his tunnel. As you turn to follow',
+        text:   'You sprint foreword propelled by fear of the impending swarm. The stranger has already disappeared into the passage. ' +
+                'As you make the turn to follow, you glimpse a roiling mass of bodies flow out into the chamber behind you. Around the ' +
+                'A door is being held open and you dash into it ',
         image: "image15",
         options: [
             {

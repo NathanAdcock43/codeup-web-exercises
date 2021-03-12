@@ -28,37 +28,38 @@
 
 // BREAK AND CONTINUE: Ways to manipulate the behavior of your loop [stop vs skip]
 
+//1)
 
-// console.log("Number to Skip is: 27");
-// for (var i = 1; i <= 50; i++) {
-//     if (i % 2 && i !== 27){
-//         console.log(("Here is an odd number: " + i));
-//     } else if (i === 27) {
-//         console.log(("Yikes! Skipping number: " + i));
-//     } else {
-//     }
-// }
+console.log("Number to Skip is: 27");
+for (var i = 1; i <= 50; i++) {
+    if (i % 2 && i !== 27){
+        console.log(("Here is an odd number: " + i));
+    } else if (i === 27) {
+        console.log(("Yikes! Skipping number: " + i));
+    } else {
+    }
+}
 
 // 2) Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input.
 
-// var pickNum = 2
-//
-// while (pickNum >= 50 || pickNum <= 0  || pickNum % 2 === 0){
-//     pickNum = Number(prompt("Pick an odd number between 1 and 50"));
-// }
-// console.log(pickNum);
+var pickNum = 2
+
+while (pickNum >= 50 || pickNum <= 0  || pickNum % 2 === 0){
+    pickNum = Number(prompt("Pick an odd number between 1 and 50"));
+}
+console.log(pickNum);
 
 
 // 3) Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
 
 
-// for (var i = 1; i <= 50; i = i + 2){
-//     if (i === pickNum){
-//         console.log("Yikes! Skipping number: " + i);
-//         continue
-//     }
-//     console.log("Here is an odd number: " + i)
-// }
+for (var i = 1; i <= 50; i = i + 2){
+    if (i === pickNum){
+        console.log("Yikes! Skipping number: " + i);
+        continue
+    }
+    console.log("Here is an odd number: " + i)
+}
 
 
 
