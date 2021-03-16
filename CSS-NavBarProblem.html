@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox In Practice</title>
+    <style>
+        .flex-container {
+            /*justify-content: space-around;*/
+            /*align-items: center;*/
+            text-align: center;
+            border: 3px solid goldenrod;
+            background-color: rebeccapurple;
+            display: flex; /* default direction = row */
+            width: 100%;
+        }
+        .flex-item {
+            background: #BFD45D;
+            padding: 1em;
+            margin: .5em;
+        }
+        #item1 {
+        }
+        #item2 {
+        }
+        #item3 {
+        }
+        #item4 {
+        }
+        /*New part of the lecture*/
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+        nav {
+            background: #333333;
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-family: Verdana;
+        }
+        nav a:hover {
+            background: black;
+        }
+        .flex-item{
+            display: flex;
+        }
+        .second-container{
+            flex-direction: row;
+
+        }
+        #nav1{
+            margin: 1em;
+        }
+        #nav2{
+            margin: 1em;
+        }
+        #nav3{
+            margin: 1em;
+        }
+        #nav4{
+            margin: 1em 1em 1em auto;
+        }
+    </style>
+</head>
+<body>
+<div class="flex-container">
+    <div id="item1" class="flex-item">Hamburger</div>
+    <div id="item2" class="flex-item">Logo</div>
+    <div id="item3" class="flex-item">Title</div>
+    <div id="item4" class="flex-item">Logout</div>
+</div>
+<nav class="second-container">
+    <ul>
+        <li class="nav-items" id="nav1"><a href="#">Home</a></li>
+        <li class="nav-items" id="nav2"><a href="#">News</a></li>
+        <li class="nav-items" id="nav3"><a href="#">Contact</a></li>
+        <li class="nav-items" id="nav4"><a href="#">About</a></li>
+    </ul>
+</nav>
+</body>
+</html>
