@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+}
+
+.main-bar {
+    display: flex;
+    background: grey;
+    width: 100%;
+    align-items: baseline;
+    /*flex-basis: ;*/
+    font-family: otherFont, "Times New Roman", sans-serif;
+}
+
+@font-face {
+    font-family: "logoFont";
+    src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("TrueType");
+}
+
+@font-face {
+    font-family: "otherFont";
+    src: url("../fonts/Work_Sans/WorkSans-VariableFont_wght.ttf") format("TrueType");
+}
+
+.left-nav{
+    display: flex;
+    justify-content: flex-start;
+    flex-grow: 1;
+    /*padding: .5em;*/
+}
+
+.flex-container-logo{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    /*padding: .5em;*/
+}
+
+.logo{
+    font-size: 3em;
+    padding: .2em;
+    font-family: logoFont, "Times New Roman", sans-serif;
+}
+
+.right-nav{
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    /*padding: .5em;*/
+
+}
+
+a:hover{
+    color: blue;
+}
+
+a{
+    text-decoration: none;
+    /*padding: .2em;*/
+    color: black;
+}
+
+li{
+    padding: .2em;
+    list-style: none;
+    text-decoration: none;
+}

@@ -72,11 +72,11 @@ body {
 }
 
 .image2 {
-    content:url('../adventuregameimages/discovers the city 2 edited 2.png');
+    content:url('../adventuregameimages/cityFirstDiscovered1.png');
     border-radius: 50px;
     padding: 20px 30px;
     display: block;
-    width: 70%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
