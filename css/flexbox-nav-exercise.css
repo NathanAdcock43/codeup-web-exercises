@@ -9,11 +9,12 @@ body {
 
 .main-bar {
     display: flex;
-    background: grey;
+    background: lightgrey;
     width: 100%;
-    align-items: baseline;
+    align-items: center;
     /*flex-basis: ;*/
     font-family: otherFont, "Times New Roman", sans-serif;
+    font-weight: bold;
 }
 
 @font-face {
@@ -36,13 +37,14 @@ body {
 .flex-container-logo{
     display: flex;
     justify-content: center;
+    align-content: center;
     flex-grow: 1;
     /*padding: .5em;*/
 }
 
 .logo{
     font-size: 3em;
-    padding: .2em;
+    padding: .2em .2em;
     font-family: logoFont, "Times New Roman", sans-serif;
 }
 
@@ -50,7 +52,7 @@ body {
     display: flex;
     justify-content: flex-end;
     flex-grow: 1;
-    /*padding: .5em;*/
+    padding: .5em;
 
 }
 
@@ -63,9 +65,20 @@ a{
     /*padding: .2em;*/
     color: black;
 }
+ul{
+    padding: .5em;
+    margin-block-start: unset;
+    margin-block-end: unset;
+}
+
+h1{
+    margin-block-start: unset;
+    margin-block-end: unset;
+}
 
 li{
-    padding: .2em;
+    padding: .5em;
     list-style: none;
     text-decoration: none;
+    text-align: start;
 }
