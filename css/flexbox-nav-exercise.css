@@ -42,10 +42,12 @@ body {
     /*padding: .5em;*/
 }
 
-.logo{
+body .flex-container-logo .logo a{
+    position: absolute;
     font-size: 3em;
     padding: .2em .2em;
     font-family: logoFont, "Times New Roman", sans-serif;
+    text-align: center;
 }
 
 .right-nav{
@@ -81,4 +83,8 @@ li{
     list-style: none;
     text-decoration: none;
     text-align: start;
+}
+
+p {
+    text-align: center;
 }
