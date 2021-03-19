@@ -1,0 +1,167 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    font-family: Arial;
+
+}
+
+.alert-info{
+    text-align: center;
+    padding: 1em 0 1em 0;
+    margin: 1em 0 0 0;
+    background: paleturquoise;
+    border: solid lightgrey;
+}
+
+h1{
+    text-align: center;
+    margin: .5em 0 0 0;
+}
+
+/*ubuntu*/
+.alert-info a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: blue;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    padding: 0;
+}
+
+
+nav ul li{
+    text-align: center;
+    background: lightgrey;
+    margin: .5em 0 .5em 0;
+    padding: 1em 0 1em 0;
+
+}
+
+img{
+    display: inline-block;
+    padding: unset;
+    margin: .5em 0 .5em 0;
+    width: 100%;
+}
+
+/*Main Text Block with header, has an ID for some reason*/
+.main{
+    display: flex;
+    flex-direction: column;
+    padding: unset;
+    margin: .5em 0 .5em 0;
+
+}
+
+.main h2{
+    display: flex;
+    margin: .5em 0 .5em 0;
+
+}
+
+.main p{
+    display: flex;
+    margin: .5em 0 .5em 0;
+
+}
+
+/*Secondary text block with header*/
+.sub-section{
+    display: flex;
+    flex-direction: column;
+    padding: unset;
+    margin: .5em 0 .5em 0;
+
+}
+
+.sub-section h2{
+    display: flex;
+    font-style: italic;
+    margin: .5em 0 .5em 0;
+
+}
+
+.sub-section p{
+    display: flex;
+    font-style: italic;
+    margin: .5em 0 .5em 0;
+
+}
+
+/*Footer social media links*/
+#social-media-links{
+
+}
+
+footer{
+    margin-top: 4em;
+}
+
+
+
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width:768px) {
+    body{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .alert-info a{
+       display: none;
+        border-color: white;
+    }
+
+    h1{
+        text-align: left;
+        margin-top: 1em;
+    }
+
+    nav{
+        display: flex;
+        margin-left: auto;
+    }
+
+    nav ul{
+        flex-direction: row;
+    }
+
+    nav ul li{
+
+        background: none;
+        padding: 1em;
+    }
+
+    .header-img{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main{
+        width: 62%;
+        margin-right: 3%;
+    }
+
+    .sub-section{
+        width: 33%;
+    }
+}
+
+
+
+
+
+
