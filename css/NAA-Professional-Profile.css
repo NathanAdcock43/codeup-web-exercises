@@ -1,34 +1,102 @@
-*{
+* {
     box-sizing: border-box;
 }
 body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform: skew(-2deg);
+    transform-origin:top;
     height: 100vh;
-    margin: 10px;
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    padding: 0;
+    padding: 3% 20%;
+    background: saddlebrown;
     font-family: Arial;
 
 }
 
-img{
+/*the background of the sitet either a desk or a floor under the news paper*/
+/*.plank-floor{*/
+/*    height: 100vh;*/
+/*    width: 100vw;*/
+/*    */
+/*}*/
+
+/*container that holds the entire paper's content*/
+.entire-paper{
+    position: fixed;
+    top: calc(10% - 2px);
+    transform-origin:top;
+    min-width: 800px;
+    max-width: 900px;
+    background: lightgrey;
+    padding: 0 0 800px 0;
+    margin: 0 auto;
+}
+
+/*The next three element are the title and logo in the header*/
+header {
+    display: flex;
+    flex-direction: row;
+    background: navajowhite;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+header .title-logo{
+    display: flex;
+    justify-self: flex-start;
+}
+
+header .news-title{
+    display: flex;
+    align-content: center;
+    justify-self: flex-end;
+    z-index: 10;
+}
+
+/*this list will have a list of fake articles titles with facts for filler*/
+div .header-bar{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-content: center;
+    padding: 1em ;
+    margin: 0;
+    list-style: none;
+}
+
+/*The body has three columns in separate containers */
+div .news-body{
+    display: flex;
+    margin: .5em;
+}
+
+div .news-body img{
     display: inline-block;
     padding: unset;
     margin: .5em 0 .5em 0;
     width: 100%;
 }
 
-span .news-title{
-    display: flex;
-    margin: .5em;
+.news-body .left-article-strip{
+    width: 25%;
+    margin: 0 2% 0 2%;
+    float: right;
 }
 
-nav .bent-tabs{
-
+.news-body .center-article-area{
+    width: 42%;
+    float: right;
 }
 
-div .news-body{
-    display: flex;
-    margin: .5em;
-
+.news-body .right-article-strip{
+    width: 25%;
+    float: right;
+    margin: 0 2% 0 2%;
 }
