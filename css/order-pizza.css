@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+}
+
+.jumbotron{
+    background: #D0E4F5 url("../Classroom-Images/pizza.png")
+                no-repeat scroll 50% 0;
+    text-align: center;
+    Width: 100%;
+    padding: 5em 0 5em 0;
+}
+
+.jumbotron h1{
+    background: rgba(255,255,255,0.75);
+    width: 100%;
+}
+
+i{
+    margin: 1em;
+}

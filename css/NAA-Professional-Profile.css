@@ -2,20 +2,23 @@
     box-sizing: border-box;
 }
 body {
-    position: absolute;
+    position: relative;
     top: 0;
     bottom: 0;
     left: 0;
+    min-width: 600px;
     transform: skew(-2deg);
     transform-origin:top;
-    height: 100vh;
-    width: 100vw;
+    /*height: auto;*/
     display: flex;
-    flex-direction: column;
-    padding: 3% 20%;
-    background: saddlebrown;
-    font-family: Arial;
 
+    flex-direction: column;
+    padding: 25% 25%;
+    /*overflow-clip: ;*/
+    /*object-fit: initial;*/
+    background: url("../Classroom-Images/Desk-Background.png") no-repeat center;
+    background-size: 2000px;
+    font-family: Arial;
 }
 
 /*the background of the sitet either a desk or a floor under the news paper*/
@@ -27,13 +30,17 @@ body {
 
 /*container that holds the entire paper's content*/
 .entire-paper{
-    position: fixed;
-    top: calc(10% - 2px);
+    position: absolute;
+    top: calc(50% - 400px);
+    left: calc(50% - 400px);
+    transform: translate(-50, -50);
     transform-origin:top;
-    min-width: 800px;
-    max-width: 900px;
-    background: lightgrey;
-    padding: 0 0 800px 0;
+    width: 800px;
+    height: 1200px;
+    /*max-height: 875px;*/
+    background: url("../Classroom-Images/newspapertexture9.png");
+    background-size: cover;
+    padding: 2em 0 300px 0;
     margin: 0 auto;
 }
 
@@ -41,7 +48,6 @@ body {
 header {
     display: flex;
     flex-direction: row;
-    background: navajowhite;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -86,17 +92,32 @@ div .news-body img{
 
 .news-body .left-article-strip{
     width: 25%;
-    margin: 0 2% 0 2%;
+    margin: 0 4% 0 2%;
     float: right;
 }
 
 .news-body .center-article-area{
-    width: 42%;
+    width: 43%;
     float: right;
 }
 
 .news-body .right-article-strip{
-    width: 25%;
+    width: 20%;
     float: right;
-    margin: 0 2% 0 2%;
+    margin: 0 4% 0 2%;
 }
+
+.img-magnifier-glass {
+    position: absolute;
+    border: 3px solid #000;
+    border-radius: 50%;
+    cursor: none;
+    /*Set the size of the magnifier glass:*/
+    width: 100px;
+    height: 100px;
+}
+
+.img-magnifier-container {
+    position: relative;
+}
+
