@@ -3,18 +3,17 @@
 }
 body {
     position: relative;
-    top: 0;
+    top: -100px;
     bottom: 0;
     left: 0;
-    min-width: 600px;
     transform: skew(-2deg);
     transform-origin:top;
     /*height: auto;*/
     display: flex;
-
     flex-direction: column;
     padding: 25% 25%;
-    /*overflow-clip: ;*/
+    overflow: scroll;
+    overflow-scrolling: auto;
     /*object-fit: initial;*/
     background: url("../Classroom-Images/Desk-Background.png") no-repeat center;
     background-size: 2000px;
@@ -27,24 +26,67 @@ body {
     left: calc(50% - 400px);
     transform: translate(-50, -50);
     transform-origin:top;
-    width: 800px;
+    width: 850px;
     height: 1200px;
     /*max-height: 875px;*/
-    background: url("../Classroom-Images/newspapertexture9.png");
+    background: url("../Classroom-Images/papertexture-top-layer2.png ");
     background-size: cover;
-    padding: 2em 0 300px 0;
+    padding: 5em 0 0 0;
     margin: 0 auto;
     font-family: 'Droid Serif', serif;
     font-size: 14px;
     color: #2f2f2f;
+    overflow: scroll;
+    overflow-scrolling: touch;
 }
 
-header{
+
+
+.entire-paper::before,
+.entire-paper::after {
+    content: "";
+    position: absolute;
+    height: 95%;
+    width: 99%;
+}
+
+.entire-paper::before {
+    right: 25px;
+    top: -15px;
+    transform-origin: top;
+    transform: rotate(3deg);
+    background: url("../Classroom-Images/papertexture-bottomlayer1.png");
+    z-index: -1;
+}
+
+.blind-lights{
+    z-index: 10;
+    position: absolute;
+    right: 60px;
+    top: 200px;
+}
+
+.entire-paper::after {
+    right: 60px;
+    top: -25px;
+    transform-origin: bottom;
+    transform: skew(-2deg) ;
+    background: url("../Classroom-Images/papertexture-bottomlayer2.png");
+    z-index: -2;
+}
+
+.head{
+    margin:0 10% 20px 0;
+}
+
+
+.title{
     font-family: 'Playfair Display', serif;
     font-weight: 900;
     font-size: 80px;
+    display: flex;
+    justify-content: center;
     text-transform: uppercase;
-    display: inline-block;
     line-height: 72px;
     margin-bottom: 20px;
 }
@@ -56,26 +98,17 @@ p{
 
 .head{
     text-align: center;
-    position: relative;
 }
 
 .subhead{
+    display: flex;
+    justify-content: center;
     text-transform: uppercase;
     border-bottom: 2px solid #2f2f2f;
     border-top: 2px solid #2f2f2f;
     padding: 12px 0 12px 0;
+    margin: 0 10% 0 1%;
 
-}
-.weatherforcastbox{
-    position: relative;
-    width: 12%;
-    left: 10px;
-    border: 3px double #2f2f2f;
-    padding: 10px 15px 10px 15px;
-    line-height: 20px;
-    display: inline-block;
-    margin: 0 50px 20px -360px;
-}
 
 .content{
     font-size: 0;
@@ -88,8 +121,9 @@ p{
 }
 
 .collumns{
-    width: 95%;
-    margin-left: auto;
+    width: 90%;
+    margin-left: 6%;
+    margin-right: auto;
 }
 
 .collumn{
