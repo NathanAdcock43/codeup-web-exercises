@@ -51,8 +51,8 @@ body {
 }
 
 .entire-paper::before {
-    right: 30px;
-    top: 5px;
+    right: 40px;
+    top: 10px;
     transform-origin: top;
     transform: rotate(2deg);
     background: url("../Classroom-Images/papertexture-bottom-layers1.png");
