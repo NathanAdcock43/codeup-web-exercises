@@ -26,10 +26,10 @@ body {
     left: calc(50% - 400px);
     transform: translate(-50, -50);
     transform-origin:top;
-    width: 850px;
+    width: 925px;
     height: 1200px;
     /*max-height: 875px;*/
-    background: url("../Classroom-Images/papertexture-top-layer2.png ");
+    background: url("../Classroom-Images/papercurve-top-layer2.png");
     background-size: cover;
     padding: 5em 0 0 0;
     margin: 0 auto;
@@ -51,28 +51,28 @@ body {
 }
 
 .entire-paper::before {
-    right: 25px;
-    top: -15px;
+    right: 30px;
+    top: 5px;
     transform-origin: top;
-    transform: rotate(3deg);
-    background: url("../Classroom-Images/papertexture-bottomlayer1.png");
+    transform: rotate(2deg);
+    background: url("../Classroom-Images/papertexture-bottom-layers1.png");
     z-index: -1;
+}
+
+.entire-paper::after {
+    right: 80px;
+    top: 10px;
+    transform-origin: bottom;
+    transform: skew(-2.5deg) ;
+    background: url("../Classroom-Images/papertexture-bottom-layers2.png");
+    z-index: -2;
 }
 
 .blind-lights{
     z-index: 10;
     position: absolute;
-    right: 60px;
+    right: 65px;
     top: 200px;
-}
-
-.entire-paper::after {
-    right: 60px;
-    top: -25px;
-    transform-origin: bottom;
-    transform: skew(-2deg) ;
-    background: url("../Classroom-Images/papertexture-bottomlayer2.png");
-    z-index: -2;
 }
 
 .head{
@@ -100,15 +100,32 @@ p{
     text-align: center;
 }
 
-.subhead{
+.subhead {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     text-transform: uppercase;
     border-bottom: 2px solid #2f2f2f;
     border-top: 2px solid #2f2f2f;
     padding: 12px 0 12px 0;
     margin: 0 10% 0 1%;
+    text-decoration: none;
+    color: black;
+}
 
+.links{
+    border-right: solid black thin;
+    /*padding-right: 9em;*/
+}
+
+a {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    padding: 1em;
+    margin: -.25em;
+    width: 19%;
+    text-align: center;
+}
 
 .content{
     font-size: 0;
