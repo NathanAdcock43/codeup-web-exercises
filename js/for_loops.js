@@ -9,9 +9,25 @@
 
 // function showMultiplicationTable(x){
 //     for (var i = 1; i <= 10 ; i++) {
-//        console.log(x + " X " + i + " = " + (i * x));
+//         var i =
+//        return (x + " X " + i + " = " + (i * x));
 //     }
 // }
+
+
+
+
+
+
+
+
+
+
+function showMultiplicationTable(x){
+    for (var i = 1; i <= 10 ; i++) {
+       var mult = (x + " X " + i + " = " + (i * x));
+    }
+}
 
 // Trying to log the odd numbers but problem with "i % 2"
 // for (var i = 1 ; i <= 5 ; i++){
@@ -115,6 +131,14 @@
 //         console.log (output);
 //     }
 
+function pipeFix(numbers){
+    var min = Math.min(...numbers);
+    var max = Math.max(...numbers);
+    var arr = []
+    for( var i = min; i <= max; i++)
+    arr.push(i)
+    return arr
+}
 
 
 //Exercise 4
