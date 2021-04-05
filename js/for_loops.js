@@ -215,10 +215,10 @@
 
 
 // Code Before final refactor
-//Code Up Cafe Restaurant example from class
-//1 order some food [entrees] [do/while loop] <asking how many entrees>
-//2 Back of the house- Preparation of food [while loop] <processing those entrees>
-//3 how did we do? how many orders did we have? [for Loop]
+// Code Up Cafe Restaurant example from class
+// 1 order some food [entrees] [do/while loop] <asking how many entrees>
+// 2 Back of the house- Preparation of food [while loop] <processing those entrees>
+// 3 how did we do? how many orders did we have? [for Loop]
 
 // do {
 //     var orderingFood = true;
@@ -244,7 +244,7 @@
 // }
 //
 // alert("Phew,that was a lot of orders, but we got them out!");
-//
+
 // //for loop = set up the structure to Show Amt of entrees [manager in the office counting num of entrees]
 // // Entrees = a num to use {subtract a entree fulfilled after each complete
 //
@@ -331,6 +331,19 @@
 // }
 // var numberofPets = totalPets(petsArray);
 // console.log("In all the total number of pets is " + numberofPets);
+//
+// function petDeduction(petsArray){
+//     var total = 12;
+//     for(var i = 0; i < petsArray.length; i++){
+//         total = total - petsArray[i].numPets;
+//     }
+//     return total;
+// }
+//
+// var petsLeft = petDeduction(petsArray);
+//
+// console.log("We sold a total of " + numberofPets + " and we have " + petsLeft + "pets left.");
+
 // // more drills:
 // // Write a function named countPosi that accepts an array of numbers and returns the number of positive numbers in the array.
 // function countPosi (array){
@@ -398,12 +411,12 @@
 //     return position === 0 ? 'Pls go away and stop eating my sheep' : `Oi! Sheep number ${ position }! You are about to be eaten by a wolf!`;
 // }
 
-function warnTheSheep(queue) {
-    var position = queue.length - queue.indexOf('wolf') - 1;
-    if (position === 0){
-        return "Pls go away and stop eating my sheep";
-    } else {
-        return "Oi! Sheep number"+ ${position} +"! You are about to be eaten by a wolf!";
-    }
-}
+// function warnTheSheep(queue) {
+//     var position = queue.length - queue.indexOf('wolf') - 1;
+//     if (position === 0){
+//         return "Pls go away and stop eating my sheep";
+//     } else {
+//         return "Oi! Sheep number"+ ${position} +"! You are about to be eaten by a wolf!";
+//     }
+// }
 
