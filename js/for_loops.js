@@ -380,14 +380,14 @@
 
 
 // Write a function named convertAddressToObject that accepts a string that contains a street number (as a string) and street name separated by a space characters, and returns an object with properties streetNumber and streetName.
-// function convertAddressToObject(string){
-//     var array = string.split(" ");
-//     var address = {};
-//     address.streetNumber = array[0];
-//     // var streetName =
-//     address.streetName = array[1] +" " + array[2];
-//     console.log(address);
-// }
+function convertAddressToObject(string){
+    var array = string.split(" ");
+    var address = {};
+    address.streetNumber = array[0];
+    // var streetName =
+    address.streetName = array[1] +" " + array[2];
+    console.log(address);
+}
 // convertAddressToObject('8626 Sunny Oaks') // {streetNumber: '8646', streetName: 'Sunny Oaks'}
 // convertAddressToObject('5408 Villa Nueva') // {streetNumber: '5408', streetName: 'Villa Nueva'}
 
