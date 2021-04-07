@@ -40,6 +40,9 @@ $(document).ready(function() {
         $(e.target).html('thank you for the space');
     })
 
+    $('#title2').dblclick(function (e){
+        $('#title2').css({'visibility': 'hidden'})
+    })
 
     $('#title1').html("Hello, and welcome to this test site")
     var contents = $('#title1').html(); alert(contents);

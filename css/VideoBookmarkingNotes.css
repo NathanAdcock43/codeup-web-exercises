@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("TrueType");
+}
+
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", "Times New Roman";
+}
+
+.title{
+    width: 90%;
+    margin: 2em auto 0em auto;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.explanation{
+    width: 70%;
+    margin: 2em auto 0 auto;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: large;
+    overflow-wrap: break-word;
+}
+
+.Form{
+    width: 70%;
+    margin: 1em auto 3em auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.formLabel{
+    display: flex;
+    align-self: center;
+    width: 100%;
+    padding: 5px 5px 0 5px;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+#userURLField{
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+}
+
+.btn-submit{
+    display: flex;
+    align-self: flex-start;
+    margin: 5px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: large;
+}
+
+#videoWindow{
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.textField{
+    display: flex;
+    align-self: center;
+    width: 100%;
+    height: 10em;
+    margin: 5px 20px 5px 20px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: large;
+}

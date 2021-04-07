@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>National Parks</title>
+    <style>
+        .invisible {
+            background: #0fb784;
+        }
+
+        .disappear {
+            visibility: hidden;
+        }
+
+        .highlight {
+            background: yellowgreen;
+        }
+
+    </style>
+</head>
+<body>
+    <p>National Parks:</p>
+    <button id="visibility">See the Answers</button>
+    <dl>
+        <dt>1) How much land does the National Park Service protect?</dt>
+        <dd class="invisible">over 84 million acres of wild landscapes and historic sites.</dd>
+
+        <dt>2) Yellowstone National Park (in Wyoming, Idaho, and Montana) is the oldest U.S. national park, When was it founded? </dt>
+        <dd class="invisible">Yellowstone National Park was founded in 1872.</dd>
+
+        <dt>3) Three of the 10 highest waterfalls in the world are located in which National Park?</dt>
+        <dd class="invisible">Yosemite National Park in California</dd>
+
+        <dt>4) Ribbon Falls in Yosemite is nine times taller which water fall?</dt>
+        <dd class="invisible">Niagara Falls.</dd>
+
+        <dt>5) One of the hottest temperatures on earth was recorded in 1913 in which national Park?</dt>
+        <dd class="invisible">in Death Valley National Park, registering 134 degrees.</dd>
+
+        <dt>6) Which natural attraction at a US national park is known as one of the Seven Natural Wonders of the World?</dt>
+        <dd class="invisible">The Grand Canyon, in Grand Canyon National Park in Arizona </dd>
+
+        <dt>7) California's Sequoia National Park is home to the largest living single-stem tree in the world, What is it called?</dt>
+        <dd class="invisible">named General Sherman. The tree is approximately 275 feet tall and weighs approximately 1,900 metric tons</dd>
+
+        <dt>8) When a giant sequoia tree fell and blocked a road in Sequoia National Park in California in 1937, how did the National park service deal with the problem?</dt>
+        <dd class="invisible">the National Park Service simply created a tunnel through the 275-foot by 21-foot tree.</dd>
+
+        <dt>9) The second U.S. national park created is no longer a national park?</dt>
+        <dd class="invisible">Mackinac National Park in Michigan was established in 1875 and was returned to the state in 1895.</dd>
+
+        <dt>10) The smallest national park is?</dt>
+        <dd class="invisible">Hot Springs National Park in Arkansas, coming in at about 5,500 acres. This was actually the first federally protected piece of land in 1832. It was not named a national park until 1921. </dd>
+    </dl>
+    <script type="text/javascript"
+                src="https://code.jquery.com/jquery-3.6.0.js"
+                integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+                crossOrigin="anonymous">
+    </script>
+    <script>
+        "use strict";
+
+        $(document).ready(function() {
+            $('#visibility').click(function() {
+                $('.invisible').toggleClass('disappear');
+            });
+
+            $('dt').click(function() {
+                $('this').toggleClass('highlight');
+            });
+
+        });
+
+    </script>
+</body>
+</html>
+
