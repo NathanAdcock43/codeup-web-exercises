@@ -11,7 +11,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    font-family: "Montserrat", "Times New Roman";
+    font-family: "Montserrat", serif;
 }
 
 .title{
@@ -56,6 +56,11 @@ body {
     display: flex;
     margin: 5px;
     padding: 5px;
+    background: lightgrey;
+    color: white;
+    text-outline: 1px royalblue;
+    font-weight: bold;
+    font-size: large;
 }
 
 .btn-submit{
@@ -81,7 +86,11 @@ body {
     width: 100%;
     height: 10em;
     margin: 5px 20px 5px 20px;
-    padding: 5px;
+    padding: 20px;
+    background: lightgrey;
     font-weight: bold;
     font-size: large;
+    color: white;
+    text-outline: 1px royalblue;
+    font-family: "Montserrat", serif !important;
 }

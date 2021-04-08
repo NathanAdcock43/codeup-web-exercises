@@ -19,20 +19,18 @@
             information for later use or send it to a friend. Enjoy!</p>
         <form class="Form" id="ChangeURL">
             <label class="formLabel" for="userURLField">ENTER YOUR URL HERE</label>
-            <input id="userURLField" name="Video Link" type="text">
+            <input id="userURLField" name="Video Link" type="text" placeholder="URL">
             <button class="btn-submit" id="userURLSubmit" type="submit">SUBMIT</button>
         </form>
 
-        <video id="videoWindow" controls width="250" poster="Classroom-Images/IntroReel.jpg">
-
-            <source class= "userVid" src="#" type="video/mp4">
+        <video controls class= "userVid" id="videoWindow" width="250" poster="Classroom-Images/IntroReel.jpg" src="https://www.youtube.com/watch?v=iX_QyjdctsQ">
 
             Sorry, your browser doesn't support embedded videos.
         </video>
 
         <form class="Form" id="notesForm">
             <label class="formLabel" for="userField">TYPE A LINE OF NOTES AND PRESS ENTER</label>
-            <textarea  class= "textField" id="userField" type="text" name="notes" rows="20">YOUR NOTES GO HERE, PRESS ENTER TO CREATE A BOOKMARK</textarea>
+            <textarea  class= "textField" id="userField" type="text" name="notes" rows="20" placeholder="YOUR NOTES GO HERE, PRESS ENTER TO CREATE A BOOKMARK"></textarea>
             <button class="btn-submit" id="userSession" type="submit">SUBMIT</button>
         </form>
 </body>
