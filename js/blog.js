@@ -3,12 +3,12 @@
         "use strict"; // Start of use strict
 
 
-        $.ajax( data/blog.json, {
-           type: "POST",
-           content: ,
-            categories: [
-        ],
-        });
+        // $.ajax( data/blog.json, {
+        //    type: "POST",
+        //    content: ,
+        //     categories: [
+        // ],
+        // });
 
 
         // Floating label headings for the contact form
