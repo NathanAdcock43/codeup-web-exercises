@@ -34,7 +34,7 @@ body {
     overflow-wrap: break-word;
 }
 
-.Form{
+.form{
     width: 70%;
     margin: 1em auto 3em auto;
     display: flex;
@@ -52,7 +52,7 @@ body {
     font-size: x-large;
 }
 
-#userURLField{
+#videoLink{
     display: flex;
     margin: 5px;
     padding: 5px;

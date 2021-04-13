@@ -11,22 +11,22 @@
             src="https://code.jquery.com/jquery-3.6.0.js"
             integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
             crossorigin="anonymous"></script>
-        <header class="title">TURN TYPED NOTES INTO <BR> TIMESTAMPED BOOKMARKS FOR VIDEOS</header>
+        <header class="title">TURN YOUR TYPED NOTES INTO <BR> TIMESTAMPED BOOKMARKS FOR VIDEOS</header>
         <p class="explanation">Enter a URL of a video that you wish to take notes about, type in the text field below and press enter.
             Each entry will become part of a list of links that will send you to the moment in the video it was created.
             Want to enter more information on subsequent re-watches? Any entry made after the first viewing will be logged
             in the original list and ordered to fit chronologically with the videos time. When you are finished save the
             information for later use or send it to a friend. Enjoy!</p>
-        <form class="Form" id="ChangeURL">
-            <label class="formLabel" for="userURLField">ENTER YOUR URL HERE</label>
-            <input id="userURLField" name="Video Link" type="text" placeholder="URL">
+        <form class="form" id="inputURL" name="inputURL">
+            <label class="formLabel" for="videoLink">ENTER YOUR URL HERE</label>
+            <input id="videoLink" name="VideoLink" type="text" placeholder="URL">
             <button class="btn-submit" id="userURLSubmit" type="submit">SUBMIT</button>
         </form>
 
     <iframe id="videoWindow" src="https://www.youtube.com/embed/iX_QyjdctsQ?start=60" title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen></iframe>
 
-        <form class="Form" id="notesForm">
+        <form class="form" id="notesForm">
             <label class="formLabel" for="userField">TYPE A LINE OF NOTES AND PRESS ENTER</label>
             <textarea  class= "textField" id="userField" type="text" name="notes" rows="20" placeholder="YOUR NOTES GO HERE, PRESS ENTER TO CREATE A BOOKMARK"></textarea>
             <button class="btn-submit" id="userSession" type="submit">SUBMIT</button>
