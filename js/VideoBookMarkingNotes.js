@@ -1,11 +1,11 @@
 "use strict";
 
-var URLInput = document.forms. ;
 
-(function() {
+
+$("#userURLSubmit").click(function() {
     // var videoId = #userURL;
-    var searchVid = document.getElementById("videoWindow");
-    searchVid.setAttribute("src", "https://www.youtube.com/embed/" + videoID);
+    let searchVid = $('#videoLink').val().toString();
+    $("#videoWindow").setAttribute("src", "https://www.youtube.com/embed/" + searchVid);
 })();
 
 
