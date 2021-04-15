@@ -374,7 +374,7 @@ var personA = {
 //TODO TOGETHER: REFACTOR the above approach using ES6
 
 
-
+const {name, age} = personA;
 
 
 console.log(name);
@@ -394,8 +394,9 @@ const pals = {
 // let myDog = pals.dog;
 // let myCat = pals.cat;
 // let myMouse = pals.mouse;
-//
-//
+
+
+
 // console.log(myDog); //Spike
 // console.log(myCat); //Tom
 // console.log(myMouse); //Jerry
@@ -404,10 +405,11 @@ const pals = {
 //TODO TOGETHER: REFACTOR the above approach using ES6
 //new way
 
+let {dog, cat, mouse} = pets
 
-// console.log(dog);
-// console.log(cat);
-// console.log(mouse);
+console.log(dog);
+console.log(cat);
+console.log(mouse);
 
 
 /*==============================================*/
@@ -421,10 +423,10 @@ const theFlash = {
     powers: "Super Speed"
 }
 
+let {alias, powers} = theFlash
 
-
-// console.log(alias);
-// console.log(powers);
+console.log(alias);
+console.log(powers);
 
 
 /*==============================================*/
@@ -440,10 +442,11 @@ let cats = ["CJ", "Claude", "Max"];
 
 //new way
 
+let [cat1, cat2, cat3] = cats
 
-// console.log(cat1);
-// console.log(cat2);
-// console.log(cat3);
+console.log(cat1);
+console.log(cat2);
+console.log(cat3);
 
 
 /*==============================================*/
@@ -458,6 +461,8 @@ const alphabet = ['A', 'B', 'C', 'D', 'E'];
 
 //TODO TOGETHER: new way
 
+// let [a, b, c] =  alphabet
+
 
 // console.log(a);
 // console.log(b);
@@ -467,6 +472,7 @@ const alphabet = ['A', 'B', 'C', 'D', 'E'];
 
 //TODO TOGETHER: To skip an element...
 
+// let [a, , c] =  alphabet
 
 // console.log(a);
 // // console.log(b);
@@ -476,6 +482,7 @@ const alphabet = ['A', 'B', 'C', 'D', 'E'];
 
 //TODO TOGETHER: To get all elements...Spread operator *BONUS
 
+// let [a, b, c, ...rest] = alphabet
 
 // console.log(a);
 // console.log(b);
