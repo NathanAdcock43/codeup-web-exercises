@@ -289,8 +289,7 @@ function sayHello(name) {
 	return 'Hello, ' + name + '!';
 }
 
-
-
+let sayHello2 = (name = "World") => `Hello, ${name}`
 
 
 console.log(sayHello2());; // "Hello, World!"
@@ -312,8 +311,12 @@ function helloCohort(greeting, cohort){
 
     return greeting + " " + cohort;
 }
-212  js/es6-lec-pt2-objects.js
-@@ -0,0 +1,212 @@
+
+
+
+
+// 212  js/es6-lec-pt2-objects.js
+// @@ -0,0 +1,212 @@
     /* **************************************************************
     *
     *       Object Property Variable Assignment Shorthand
@@ -336,16 +339,16 @@ function helloCohort(greeting, cohort){
 //
 // console.log(oldDog);
 
-
-
 // //new way
 
-
-
+// let newDog = {
+//     breed,
+//     age,
+//     dogName,
+//     isCute,
+// }
+//
 // console.log(newDog);
-
-
-
 
 
     /*****************************************************************
@@ -372,12 +375,10 @@ var personA = {
 
 
 
-// console.log(name);
-// console.log(age);
 
 
-
-
+console.log(name);
+console.log(age);
 
 
 /*==============================================*/
