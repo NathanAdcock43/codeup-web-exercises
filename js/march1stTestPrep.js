@@ -921,3 +921,6 @@ function calculateChange(totalPaid, totalCost) {
         var newAmt = totalCost - totalPaid
         return newAmt.toFixed(2).toString();
     }}
+
+
+

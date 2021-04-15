@@ -25,7 +25,6 @@ geocode("530 W Wildwood dr. San Antonio, TX", mapboxToken).then(function(results
         .setLngLat(results)
         .addTo(map)
         .setPopup(new mapboxgl.Popup({offset: popupOffsets, className: 'my-class'}).setHTML("<h1>My House!</h1>"))
-        // .flyTo({center: results}, 15)
 
     $.get("https://api.openweathermap.org/data/2.5/onecall", {
         lon: results [0],
@@ -36,11 +35,36 @@ geocode("530 W Wildwood dr. San Antonio, TX", mapboxToken).then(function(results
     }).done(function(results) {
         console.log(results);
     });
+    $.ajax({
+        url: "https://api.openweathermap.org/data/2.5/forecast, //API Call",
+        dataType: "json",
+        type: "GET",
+        data: {
+            q: results,
+            appid: openweatherToken,
+            cnt: "10"
+        },
+        success: function(data) {
+            console.log('Received data:', data) // For testing
+            var wf = "";
+            wf += "<h2>" + data.city.name + "</h2>"; // City (displays once)
+            $.each(data.list, function(index, val) {
+                wf += "<p>" // Opening paragraph tag
+                wf += "<b>Day " + index + "</b>: " // Day
+                wf += val.main.temp + "&degC" // Temperature
+                wf += "<span> | " + val.weather[0].description + "</span>"; // Description
+                wf += "<img src='https://openweathermap.org/img/w/" + val.weather[0].icon + ".png'>" // Icon
+                wf += "</p>" // Closing paragraph tag
+            });
+            $("#showWeatherForcast").html(wf);
+        }
+    });
 });
 
 
-
-
+var key = "YOUR KEY";
+var city = "YOUR CITY"; // My test case was "London"
+var url = "https://api.openweathermap.org/data/2.5/forecast";
 
 
 
