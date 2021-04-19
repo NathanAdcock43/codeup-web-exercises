@@ -80,8 +80,11 @@ console.log(longestEmail);
 
 let usernameString = users.reduce(function (accumulator, user){
     return ``${accumulator} ${user.name}``;
-}, `instructors are: `)
-
-// let usernameString = totalYears / users.length
+}, `instructors are: `).slice(0, -1) + ".";
 
 console.log(usernameString);
+
+//TODO second solution using map
+
+let mapJoinSolution = `Your instructors are: ${users.map(user=>user.name).join(', ')}.`;
+console.log(mapJoinSolution);
