@@ -67,7 +67,7 @@ $("#yellowBtn").click(function(){
   let newParagraph = []
   $.each(wordsArr, function (i, word){
     console.log(word);
-    if (word[0] === 'c') {
+    if (word[0].toLowerCase() === 'c') {
       let yellowWord = `<span style='background-color:yellow'>${word}</span>`;
       console.log(yellowWord);
       newParagraph.push(yellowWord);

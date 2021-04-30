@@ -19,6 +19,72 @@ $(document).ready(function () {
         let youtubeId = GetYoutubeVideoID(searchVid)
         $("#videoWindow").attr("src", `https://www.youtube.com/embed/${youtubeId}`);
     });
+
+
+
+var time_total;
+var timeout_setter;
+var player;
+var tag = document.createElement("script");//This code loads the IFrame Player API code asynchronously
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+//This function creates an <iframe> (and YouTube player) OR uses the iframe if it exists at the "player" element after the API code downloads
+function onYouTubeIframeAPIReady()
+{
+    player = new YT.Player("player",
+        {
+            height: "850",
+            width: "477",
+            videoId: "2GvIq2SpVFM",
+            events:
+                {
+                    "onReady": onPlayerReady,
+                    "onStateChange": onPlayerStateChange
+                }
+        });
+}
+//The API will call this function when the video player is ready
+function onPlayerReady(event)
+{
+    event.target.playVideo();
+    time_total  = convert_to_mins_and_secs(player.getDuration(), 1);
+    loopy();
+}
+
+function loopy()
+{
+    var current_time = convert_to_mins_and_secs(player.getCurrentTime(), 0);
+    document.getElementById("progress-bar").style.width = (player.getCurrentTime()/player.getDuration())*100+"%";
+    console.log( current_time + " / " + time_total);
+    timeout_setter = setTimeout(loopy, 1000);
+}
+
+function convert_to_mins_and_secs(seconds, minus1)
+{
+    var mins    = (seconds>=60) ?Math.round(seconds/60):0;
+    var secs    = (seconds%60!=0) ?Math.round(seconds%60):0;
+    var secs    = (minus1==true) ?(secs-1):secs; //Youtube always displays 1 sec less than its duration time!!! Then we have to set minus1 flag to true for converting player.getDuration()
+    var time    = mins + ":" + ((secs<10)?"0"+secs:secs);
+    return time;
+}
+
+// 5. The API calls this function when the player's state changes
+function onPlayerStateChange(event)
+{
+    if (event.data == YT.PlayerState.ENDED)
+    {
+        console.log("END!");
+        clearTimeout(timeout_setter);
+    }
+    else
+    {
+        console.log(event.data);
+    }
+}
+
 });
 
 //// 5. TODO: The API calls this function when the player's state changes.
@@ -35,3 +101,4 @@ $(document).ready(function () {
 //       function stopVideo() {
 //         player.stopVideo();
 //       }
+
