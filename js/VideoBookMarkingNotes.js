@@ -21,18 +21,22 @@ $(document).ready(function () {
 
     let videoPlayer = document.getElementById("videoPlayer");
 
-    videoPlayer.addEventListener("playing", pausing_function);
-        let timer;
-    var pausing_function_1 = function() {
-        if (the video player is paused) {
-            console.log(videoPlayer.getCurrentTime());
+    function updateTimerDisplay(){
+        $('#current-time').text(formatTime( videoPlayer.getCurrentTime() ));
+        // $('#duration').text(formatTime( videoPlayer.getDuration() ));
+    }
 
+    function formatTime(time){
+        time = Math.round(time);
 
-            // remove the event listener after you paused the playback
-            yid.removeEventListener("playing", pausing_function);
-        }
-    };
+        let minutes = Math.floor(time / 60),
+            seconds = time - minutes * 60;
 
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+
+        return minutes + ":" + seconds;
+    }
+    updateTimerDisplay()
 });
 
 // Use jQuery to find all the embedly iframes on the page.
