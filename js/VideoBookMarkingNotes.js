@@ -46,6 +46,9 @@ function onYouTubeIframeAPIReady()
                 }
         });
 }
+
+
+//new code to help load the player
 //The API will call this function when the video player is ready
 function onPlayerReady(event)
 {
