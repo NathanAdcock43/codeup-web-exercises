@@ -10,6 +10,7 @@
         src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.embed.ly/player-0.1.0.min.js"></script>
     <script src="js/VideoBookMarkingNotes.js" rel="script"></script>
         <header class="title">TURN YOUR TYPED NOTES INTO <BR> TIMESTAMPED BOOKMARKS FOR VIDEOS</header>
         <p class="explanation">Enter a URL of a video that you wish to take notes about, type in the text field below and press enter.
@@ -18,13 +19,17 @@
             in the original list and ordered to fit chronologically with the videos time. When you are finished save the
             information for later use or send it to a friend. Enjoy!</p>
         <form class="form" id="inputURL" name="inputURL">
-            <label class="formLabel" for="videoLink">ENTER YOUR URL HERE</label>
-            <input id="videoLink" name="VideoLink" type="text" placeholder="URL">
+            <label class="formLabel" for="userInputtedUrl">ENTER YOUR URL HERE</label>
+            <input id="userInputtedUrl" name="userInputtedUrl" type="text" placeholder="URL">
             <button class="btn-submit" id="userURLSubmit" >SUBMIT</button>
         </form>
 
-    <iframe id="videoWindow" src="https://www.youtube.com/embed/iX_QyjdctsQ?start=60" title="YouTube video player"
+    <iframe id="player" src="https://www.youtube.com/embed/iX_QyjdctsQ?start=60" title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen></iframe>
+
+    <div id="progress" style="width: 800px; height: 10px; border: 1px solid #fff;">
+        <div id="bar" style="width: 1px; height: 10px; background: #f00;"></div>
+    </div>
 
         <form class="form" id="notesForm">
             <label class="formLabel" for="userField">TYPE A LINE OF NOTES AND PRESS ENTER</label>

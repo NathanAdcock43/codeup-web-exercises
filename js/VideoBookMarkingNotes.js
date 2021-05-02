@@ -2,11 +2,7 @@
 
 $(document).ready(function () {
 
-    $('iframe').load(function(){
-        $(this).contents().find("body").on('click', function(event) { alert('test'); });
-    });
-
-    const GetYoutubeVideoID = (youtubeURL) => {
+    const getYoutubeVideoID = (youtubeURL) => {
         youtubeURL = youtubeURL.replace("?v=","?fakeparam=100&video=");
         let urlParam = new URLSearchParams(youtubeURL);
         let videoID = urlParam.get('video');
@@ -15,30 +11,30 @@ $(document).ready(function () {
 
     $("#userURLSubmit").click(function (e) {
         e.preventDefault()
-        let searchVid = $('#videoLink').val();
-        let youtubeId = GetYoutubeVideoID(searchVid)
-        $("#videoWindow").attr("src", `https://www.youtube.com/embed/${youtubeId}`);
+        let searchVid = $('#userInputtedUrl').val();
+        let youtubeId = getYoutubeVideoID(searchVid)
+        $("#player").attr("src", `https://www.youtube.com/embed/${youtubeId}`);
     });
 
 
-
-var time_total;
-var timeout_setter;
-var player;
-var tag = document.createElement("script");//This code loads the IFrame Player API code asynchronously
-
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName("script")[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-//This function creates an <iframe> (and YouTube player) OR uses the iframe if it exists at the "player" element after the API code downloads
+let youtubeId = getYoutubeVideoID($('#userInputtedUrl').val());
+let time_total;
+let timeout_setter;
+let player;
+// var tag = document.createElement("script");//This code loads the IFrame Player API code asynchronously
+//
+// tag.src = "https://www.youtube.com/iframe_api";
+// var firstScriptTag = document.getElementsByTagName("script")[0];
+// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+//
+// //This function creates an <iframe> (and YouTube player) OR uses the iframe if it exists at the "player" element after the API code downloads
 function onYouTubeIframeAPIReady()
 {
-    player = new YT.Player("player",
+    player = new playerjs.Player("videoPlayer",
         {
-            height: "850",
-            width: "477",
-            videoId: "2GvIq2SpVFM",
+            width: "900px",
+            height: "500px",
+            videoId: youtubeId,
             events:
                 {
                     "onReady": onPlayerReady,
@@ -47,8 +43,8 @@ function onYouTubeIframeAPIReady()
         });
 }
 
-
-//new code to help load the player
+//
+// //new code to help load the player
 //The API will call this function when the video player is ready
 function onPlayerReady(event)
 {
@@ -56,7 +52,7 @@ function onPlayerReady(event)
     time_total  = convert_to_mins_and_secs(player.getDuration(), 1);
     loopy();
 }
-
+//
 function loopy()
 {
     var current_time = convert_to_mins_and_secs(player.getCurrentTime(), 0);
@@ -64,7 +60,7 @@ function loopy()
     console.log( current_time + " / " + time_total);
     timeout_setter = setTimeout(loopy, 1000);
 }
-
+//
 function convert_to_mins_and_secs(seconds, minus1)
 {
     var mins    = (seconds>=60) ?Math.round(seconds/60):0;
@@ -73,11 +69,11 @@ function convert_to_mins_and_secs(seconds, minus1)
     var time    = mins + ":" + ((secs<10)?"0"+secs:secs);
     return time;
 }
-
+//
 // 5. The API calls this function when the player's state changes
 function onPlayerStateChange(event)
 {
-    if (event.data == YT.PlayerState.ENDED)
+    if (event.data == playerjs.PlayerState.ENDED)
     {
         console.log("END!");
         clearTimeout(timeout_setter);
