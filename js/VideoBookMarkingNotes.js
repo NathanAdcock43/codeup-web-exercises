@@ -13,31 +13,31 @@ $(document).ready(function () {
         e.preventDefault()
         let searchVid = $('#userInputtedUrl').val();
         let youtubeId = getYoutubeVideoID(searchVid)
-        $("#player").attr("src", `https://www.youtube.com/embed/${youtubeId}`);
+        $("#videoPlayer").attr("src", `https://www.youtube.com/embed/${youtubeId}`);
     });
 
+    var tag = document.createElement('script');
+    tag.id = 'iframe-demo';
+    tag.src = 'https://www.youtube.com/iframe_api';
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-// let youtubeId = getYoutubeVideoID($('#userInputtedUrl').val());
-
-    let videoPlayer = document.getElementById("videoPlayer");
-
-    function updateTimerDisplay(){
-        $('#current-time').text(formatTime( videoPlayer.getCurrentTime() ));
-        // $('#duration').text(formatTime( videoPlayer.getDuration() ));
+    var player;
+    function onYouTubeIframeAPIReady() {
+    player = new YT.Player('videoPlayer', {
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+            }
+        //    looking at more API info
+        });
     }
 
-    function formatTime(time){
-        time = Math.round(time);
 
-        let minutes = Math.floor(time / 60),
-            seconds = time - minutes * 60;
-
-        seconds = seconds < 10 ? '0' + seconds : seconds;
-
-        return minutes + ":" + seconds;
-    }
-    updateTimerDisplay()
 });
+
+
+// });
 
 // Use jQuery to find all the embedly iframes on the page.
 // $('iframe.embedly-embed').each(function(){
@@ -64,4 +64,35 @@ $(document).ready(function () {
 //     var iframe = document.querySelector('iframe.embedly-embed');
 //
 //     var player = new playerjs.Player(iframe);
+
+//     function formatTime(time){
+//         time = Math.round(time);
 //
+//         let minutes = Math.floor(time / 60),
+//             seconds = time - minutes * 60;
+//
+//         seconds = seconds < 10 ? '0' + seconds : seconds;
+//
+//         return minutes + ":" + seconds;
+//     }
+//     updateTimerDisplay()
+//
+//     function onPlayerReady(event) {
+//     event.target.playVideo();
+// }
+//
+//     var tag = document.createElement('script');
+//
+//     tag.src = "https://www.youtube.com/iframe_api";
+//     var firstScriptTag = document.getElementsByTagName('script')[0];
+//     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+//
+//     // $(iframe).ready(function () {
+//     let youtubeId = getYoutubeVideoID($('#userInputtedUrl').val());
+//
+//     let videoPlayer = document.getElementById("videoPlayer");
+//
+//     function updateTimerDisplay(){
+//     $('#current-time').text(formatTime( videoPlayer.getCurrentTime() ));
+//     // $('#duration').text(formatTime( videoPlayer.getDuration() ));
+// }
