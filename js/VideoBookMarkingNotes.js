@@ -37,29 +37,7 @@ $(document).ready(function () {
 });
 
 
-// });
 
-// Use jQuery to find all the embedly iframes on the page.
-// $('iframe.embedly-embed').each(function(){
-//     // initialize the player.
-//     var player = new playerjs.Player(this);
-//
-//     // Wait for the player to be ready.
-//     player.on('ready', function(){
-//
-//         // Listen to the play event.
-//         player.on('play', function(){
-//             // Tell Google analytics that a video was played.
-//             window.ga('send', 'event', 'Video', 'Play');
-//         });
-// //
-//         //autoplay the video.
-//         player.play();
-//     });
-//     player.getCurrentTime(function(seconds){
-//         console.log('Current Time: '+seconds);
-//     });
-// });
 //
 //     var iframe = document.querySelector('iframe.embedly-embed');
 //
