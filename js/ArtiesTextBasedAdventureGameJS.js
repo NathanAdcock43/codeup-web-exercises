@@ -35,11 +35,11 @@ function showTextNode(textNodeIndex) {
 }
 
 // Tried to creat a player generated name that would have been called in text elements of the game
-var playersName;
-function assignName(){
-    playersName = toString(prompt("Welcome What is your Name?"))
-}
-assignName()
+// var playersName;
+// function assignName(){
+//     playersName = toString(prompt("Welcome What is your Name?"))
+// }
+// assignName()
 
 //function that expresses how the game should proceed or terminate
 function showOption(option) {
@@ -61,14 +61,10 @@ const textNodes = [
     {
         id: 1,
         image: "image1",
-        text:   'Vapory wisps of conscientious condense. Slowly you become aware of your hand in course, cold soil. ' +
-            'You attempt to turn your head and it does so slowly, protesting like a rusty hinge. ' +
-            'Your eyes, also slow to respond, adjust to the dim light. You are at the top of a ' +
-            'low ridge and a path winds gradually, towards what you uncertainly decide is ' +
-            'a city',
+        text:   "Excitement and peril are just a click away!",
         options: [
             {
-                text: 'Continue your observations',
+                text: 'Begin your Adventure',
                 nextText: 2
             },
 

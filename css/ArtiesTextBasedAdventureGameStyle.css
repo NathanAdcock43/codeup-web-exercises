@@ -22,7 +22,7 @@ body {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-image: url('../adventuregameimages/SleepingPerson.png');
+    background-image: url('../ArtiesGameMedia/Background.png');
     background-size: cover;
 }
 
@@ -62,7 +62,9 @@ body {
 }
 
 .image1 {
-    content:url('../adventuregameimages/AwakeningOnARidge2.png');
+    content:url('../ArtiesGameMedia/ArtiesChooseAdventure.png');
+    font-family: sans-serif !important;
+    font-weight: bold !important;
     border-radius: 50px;
     padding: 20px 30px;
     display: block;
