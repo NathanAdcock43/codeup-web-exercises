@@ -72,140 +72,115 @@ const textNodes = [
     },
     {
         id: 2,
-        text:   'Monolithic towers are intertwined with pipes aimless in their travels. ' +
-            'What you initially took for the dim light of dusk is actually an unsettling ' +
-            'ambient glow which has no definite source. The light is just bright enough to ' +
-            'make out hanging objects above. You fight panic as you look more closely at what you ' +
-            'glimpsed. Stalactites which curve away into darkness. You are underground...',
+        text:   'You are a Kid, You heard the wizard Monstro has stole all happiness from your town. ' +
+            'You need to defeat him. You go to the monster store to choose ' +
+            'a monster to help you. Which would you like?',
         image: "image2",
         options: [
             {
-                text: 'Travel down the slope toward the City',
-                nextText: 4
+                text: 'Figer: He is made of living flame',
+                nextText: 3
             },
             {
-                text: 'Turn to follow the path back over the ridge into the unknown',
-                nextText: 3
+                text: 'Rocky: He is tough made of rock and has cannons which shoot rocks',
+                nextText: 4
             },
         ]
     },
     {
         id: 3,
-        text:   'As you begin walking down the ridge you wonder how you came to be asleep on this trail, ' +
-            'but each effort to recall the truth disrupts your memories like ripples in water. ' +
-            'Your vision starts to dim, but a feeling of peace and familiarity overtakes you. ' +
-            'This will be fine, you have been here before.',
+        text:   'You got Figer and started heading toward the dessert. Oh! No! a horde of ' +
+            'goblins are blocking the first piece (You need all three pieces to make a map ' +
+            'leading to Monstro\'s Cave), Or you can fight the three dragons. Now it\'s desicion time.',
         image: "image3",
         options: [
             {
-                text: 'You drift in time and space',
-                nextText: -1
+                text: 'Fight the horde of goblins',
+                nextText: 5
+            },
+            {
+                text: 'Fight three dragons',
+                nextText: 3
             },
         ]
     },
-//Would like to have a prompt that asks for the player's name here to be stored for later use in dialog
+
     {
         id: 4,
-        text:   'You continue down the slope and the structures only grow marginally larger, they are much further ' +
-            'then you had assumed. Time drags while you walk. You prod your memory and find ' +
-            'that you cannot recall how you arrived here or even who you are. The only shred of your identity ' +
-            'that remains is your name. You say it out loud for reassurance.',
+        text:   'Page Three text',
         image: "image4",
         options: [
             {
-                text: 'Travel down the slope toward the City',
+                text: 'Player Option 1',
                 nextText: 5
+            },
+            {
+                text: 'Player Option 2',
+                nextText: 3
             },
         ]
     },
-//I have two outcomes for a single option (cross the bridge) depending on a required item
+
     {
         id: 5,
-        text:   'You at last come to a immense bridge which leads into the City. You assume that the bridge ' +
-            'was never intended for foot traffic since it only supports a single narrow rail with ' +
-            'crumbling bricks and mortar sloping off to either side. A wide yet shallow river churns ' +
-            'over slick rock fifty feet below. The trail you are now on continues down to the river\'s ' +
-            'edge in a steep but manageable decent.',
+        text:   'The goblins throw their weapons at Figer, but they miss. Figer kills them. ' +
+            'You got the first Piece! On to the Jungle. Uh-Oh! here comes a half spider half ' +
+            'Gorilla. You can easily dodge him but then you would face three demons.',
         image: "image5",
         options: [
             {
-                text: 'Cross the bridge balancing on the rail',
+                text: 'Do you want to fight the Spi-Rilla?',
                 nextText: 6
             },
             {
-                text: 'Cross the bridge using the length of chain as a harness',
-                requiredState: (currentState) => currentState.LengthOfChain,
+                text: 'Face the three terrifying demons?',
                 nextText: 7
-            },
-            {
-                text: 'Descend to the river embankment and cross to get a better look at the wall',
-                nextText: 8
             },
         ]
     },
     {
         id: 6,
-        text:   'It is obvious by the time that you step onto the rail that the bridge has not been used in ' +
-            'decades. Aside from the crumbing mortar near it\'s crown, the bridge had developed a ' +
-            'general patina of rust and moss. Despite its looks, the rail seems to be solid and holds ' +
-            'securely by its base. You tentatively begin walking foot over foot down the rail\'s length ' +
-            'Halfway from the entrance you begin to feel you have misjudged the situation. At it\'s center ' +
-            'the bridge is nearly fifty feet above the water which seems to be only a foot deep. To make ' +
-            'things worse the cavern air is moving much faster at this height. You only have 50 yards left. ' +
-            'You focus on the columns bordering the rail platform. 25 yards. A gust takes you by surprise ' +
-            'and you swing wildly to compensate. Your feet fly out beyond the rail and you rake at the bricks ' +
-            'with your hands trying to find something to hold onto. Nothing is there but slick moss....' +
-            'Your fall is fatal',
+        text:   'Page Five text',
         image: "image6",
         options: [
             {
-                text: 'Start back at the beginning',
+                text: 'Player Option 1',
                 nextText: -1
             },
             {
-                text: 'Go back and try another option',
+                text: 'Player Option 2',
                 nextText: 5
             },
         ]
     },
     {
         id: 7,
-        text:   'It is obvious by the time that you step onto the rail that the bridge has not been used in ' +
-            'decades. Aside from the crumbing mortar near it\'s crown, the bridge had developed a' +
-            'general patina of rust and moss. Despite its looks, the rail seems to be solid and holds ' +
-            'securely by its base. You decide that the only safe way to cross is by using a harness. ' +
-            'You un-sling your length of chain, wrap it twice around your waste and attach one hook to the rail. ' +
-            'Your progress will be slow since you will need to stop at each of the rail\'s braces to transfer the ' +
-            'hook, but the added safety will be worth it. You tentatively begin walking foot over foot down ' +
-            'the rail\'s length',
+        text:   'Page Six Text',
         image: "image7",
         options: [
             {
-                text: 'Continue...',
+                text: 'Player Option 1',
                 nextText: 12
+            },
+            {
+                text: 'Player Option 2',
+                nextText: 3
             },
 
         ]
     },
     {
         id: 8,
-        text:   'The river moves swiftly, but it is shallow. There is slick algae and clumps of moss, ' +
-            'but you manage to keep your feet as you cross. The forty foot city wall rises from the river ' +
-            'and gigantic gutters release a steady stream of cloudy water. You fight the current and ' +
-            'make it to a mound of rubble . While steadying yourself and looking for a way up the wall, ' +
-            'your hand comes to rest on a six foot length of chain with large dull metal hooks on either end. ' +
-            'You consider, then loop the length of chain under one arm and over the other shoulder twice, hooking ' +
-            'it to itself. This maybe useful for climbing or for dragging something. You inspect the wall again ' +
-            'and spy what appears to be scaffolding erected by the wall. The scaffolding looks questionable. ',
+        text:   'Page Seven Text',
         image: "image8",
         options: [
             {
-                text: 'Return to the bridge entering the city',
+                text: 'Player Option 1',
                 setState: { LengthOfChain: true },
                 nextText: 5
             },
             {
-                text: 'Climb the scaffolding ',
+                text: 'Player Option 2',
                 setState: { LengthOfChain: true },
                 nextText: 9
             }
@@ -213,11 +188,7 @@ const textNodes = [
     },
     {
         id: 9,
-        text:   'The scaffolding has sunk into the marshy soil near the base of the wall but a bit unevenly ' +
-            'creating a noticeable tilt. All four levels of the structure seem to have intact ' +
-            'ladders, but the final ladder is 15 feet shy of the summit. A gutter large enough to walk into ' +
-            'is 4 feet above the ladder. Using the Length of chain you could possibly climb into it. At this ' +
-            'point you are willing to try it just so you can get out of this cold murky water.',
+        text:   'Page Eight Text',
         image: "image9",
         options: [
             {
@@ -229,16 +200,7 @@ const textNodes = [
     },
     {
         id: 10,
-        text:   'Surprisingly the Scaffolding has held up well with time. The metal ladders are slick ' +
-            'and you are cautious as you make your way. You perch at the top ' +
-            'of the final ladder and attempt to use your hooked chain length to span the final distance ' +
-            'into the spout. The spray of water and soreness of your forearms distract you, nevertheless on ' +
-            'your fifth attempt the hook catches. You give the chain a sharp tug to be sure the hook is set, but ' +
-            'the motion dislodges the ladder from the slick wall. You fall and desperately cling to the wet chain. ' +
-            'The chain holds and with trembling arms you climb into the yawning gutter. You lean against the stone ' +
-            'and notice a dull throbbing pain in your lower arm. The lower hook left a three inch cut in your arm ' +
-            'during the fall. It is bleeding steadily, but isn\'t too painful. Nothing can be done for it. You must ' +
-            'keep moving.' ,
+        text:   'Page Nine Text' ,
         image: "image10",
         options: [
             {
@@ -250,18 +212,7 @@ const textNodes = [
     },
     {
         id: 11,
-        text:   'The spout that you have entered is wide enough for you to walk hunched. After 30 yards the shoot opens into a ' +
-            'sewer maintenance tunnel. Grating fifty feet above lets in enough light to see by. A shallow canal drains towards ' +
-            'you and a raised walkway traces the adjacent wall on which a number of smaller passages open. ' +
-            'You climb onto the gangway and begin to peer into each of the passages. As you do this a scrapping noise attracts your ' +
-            'attention. A foot long creature has crawled out of the water near where you exited. It walks on four legs, hairless, and ' +
-            'appears to be blind. It sniffs the ground with an elongated, fanged snout and begins to lick blood that must have come from ' +
-            'your wound. You realized that a trail of spattered blood reaches from you to this hideous thing. You shift your weight to ' +
-            'leave down the closest passage and it reacts by running in your direction. You bolt as you see another larger sewer thing ' +
-            'give chase. After a series of rapid tunnel changes you come to another chamber this time with two exits. Near the furthest exit ' +
-            'a startled bedraggled man peers at you open mouthed. From where you came you hear the scratching of claws on stone and it sounds, ' +
-            'to you, that a few sewer things have now become a pack. The man hears, looks at you anxiously, considers, and then beckons you ' +
-            'to follow him. ',
+        text:   'Page Ten Text',
 
         image: "image11",
         options: [
@@ -280,17 +231,10 @@ const textNodes = [
         ]
     },
 
-    //This is he branch that involved crossing the bridge (branch 2)
 
     {
         id: 12,
-        text:   'At it\'s center the bridge is nearly fifty feet above the water which ' +
-            'seems to be only a foot deep. To make things worse the cavern air is moving much faster at this height. ' +
-            'You only have 50 yards left. You focus on the columns bordering the rail platform. 25 yards. ' +
-            'A gust takes you by surprise and you begin to sway. The Chain cinches tight around your waste and ' +
-            'you fear that its hook may not hold, however you manage to correct your balance and begin moving again. ' +
-            'You make the rail platform! You climb around a rusting passenger car and collapse onto solid ground, ' +
-            'your heart beating wildly...',
+        text:   'Page Eleven Text',
         image: "image12",
         options: [
             {
@@ -301,12 +245,7 @@ const textNodes = [
     },
     {
         id: 13,
-        text:   'You do not remember anything of your previous life, but you sense that you are no stranger to violence. ' +
-            'You turn ready to face the disgusting sewer dwelling creature with just your fists and your determination. ' +
-            'From the dimness comes a wave of fleshy bodies and white bulbous eyes. They climb on one another in their ' +
-            'frenzy to get to the source of the blood. You stomp and punch down ward but you are immediately overwhelmed ' +
-            'by the mass of creatures. You fall, and gaze back down the hall at the curious figure retreating into the last ' +
-            'passage. Teeth, bodies, and nothing more.',
+        text:   'Page Twelve Text',
 
         image: "image13",
         options: [
@@ -322,7 +261,7 @@ const textNodes = [
     },
     {
         id: 14,
-        text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+        text: 'Page Thirteen Text',
         image: "image14",
         options: [
             {
@@ -333,9 +272,7 @@ const textNodes = [
     },
     {
         id: 15,
-        text:   'You sprint foreword propelled by fear of the impending swarm. The stranger has already disappeared into the passage. ' +
-            'As you make the turn to follow, you glimpse a roiling mass of bodies flow out into the chamber behind you. Around the ' +
-            'A door is being held open and you dash into it ',
+        text:   'Page Fourteen Text',
         image: "image15",
         options: [
             {
@@ -346,7 +283,7 @@ const textNodes = [
     },
     {
         id: 16,
-        text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+        text: 'Page Fifteen Text.',
         image: "image16",
         options: [
             {
