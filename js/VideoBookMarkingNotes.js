@@ -1,5 +1,5 @@
 "use strict";
-
+APIv3Key;
 $(document).ready(function () {
 
     const getYoutubeVideoID = (youtubeURL) => {
@@ -32,7 +32,13 @@ $(document).ready(function () {
         //    looking at more API info
         });
     }
-
+    onYouTubeIframeAPIReady()
+function init() {
+        gapi.client.setApiKey(APIv3Key);
+        gapi.client.load("youtube", "v3", function (){
+            //yt api is ready
+        });
+}
 
 });
 
