@@ -36,7 +36,7 @@ $(document).ready(function () {
 function init() {
         gapi.client.setApiKey(APIv3Key);
         gapi.client.load("youtube", "v3", function (){
-            //yt api is ready
+            //yt api is ready not sure what to use in this api yet
         });
 }
 
