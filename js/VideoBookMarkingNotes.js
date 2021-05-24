@@ -1,5 +1,5 @@
 "use strict";
-APIv3Key;
+
 $(document).ready(function () {
 
     const getYoutubeVideoID = (youtubeURL) => {
