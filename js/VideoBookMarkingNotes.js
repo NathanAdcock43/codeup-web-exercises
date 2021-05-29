@@ -43,8 +43,8 @@ function init() {
 });
 
 
-
-//
+//notes to allow a commit
+////
 //     var iframe = document.querySelector('iframe.embedly-embed');
 //
 //     var player = new playerjs.Player(iframe);

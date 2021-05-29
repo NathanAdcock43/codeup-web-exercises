@@ -17,11 +17,11 @@ $(document).ready(function () {
         $("#videoPlayer").attr("src", `https://www.youtube.com/embed/${youtubeId}enablejsapi=1`);
     });
 
-    var tag = document.createElement('script');
-
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    // var tag = document.createElement('script');
+    //
+    // tag.src = "https://www.youtube.com/iframe_api";
+    // var firstScriptTag = document.getElementsByTagName('script')[0];
+    // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 
     // var player;
@@ -39,16 +39,16 @@ $(document).ready(function () {
     //         }
     //     });
     // }
-    var player;
-    function onYouTubeIframeAPIReady() {
-        player = new YT.Player('videoPlayer', {
-            events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-            }
-            //    looking at more API info
-        });
-    }
+    // var player;
+    // function onYouTubeIframeAPIReady() {
+    //     player = new YT.Player('videoPlayer', {
+    //         events: {
+    //             'onReady': onPlayerReady,
+    //             'onStateChange': onPlayerStateChange
+    //         }
+    //         //    looking at more API info
+    //     });
+    // }
     // onYouTubeIframeAPIReady()
     // function init() {
     //     gapi.client.setApiKey(APIv3Key);
