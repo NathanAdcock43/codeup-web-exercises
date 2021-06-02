@@ -44,6 +44,7 @@ function init() {
 
 
 //notes to allow a commit
+//still working on this pro
 ////
 //     var iframe = document.querySelector('iframe.embedly-embed');
 //
